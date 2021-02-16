@@ -59,6 +59,21 @@ header {
   }
 }
 
+.header-rise {
+  animation-name: header-rise;
+  animation-duration: 7s;
+  animation-timing-function: ease-out;
+}
+
+@keyframes header-rise {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(0px, -1200px);
+  }
+}
+
 footer {
   animation-name: footer-rise;
   animation-duration: 2.4s;
@@ -71,6 +86,21 @@ footer {
   }
   100% {
     transform: translate(0, 0);
+  }
+}
+
+.footer-drop {
+  animation-name: footer-drop;
+  animation-duration: 7s;
+  animation-timing-function: ease-out;
+}
+
+@keyframes footer-drop {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(0, 1200px);
   }
 }
 
