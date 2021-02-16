@@ -162,6 +162,21 @@ footer {
   border-radius: 25px;
   list-style: none;
   padding: 50px;
+
+  /* Paragraph Zoom Animations */
+
+  animation-name: intro-para-zoom;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes intro-para-zoom {
+  from {
+    transform: scale(0.00001);
+  }
+  to {
+    transform: scale(1);
+  }
 }
 
 #galaxy-button {
