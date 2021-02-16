@@ -1,7 +1,7 @@
 /*-------------------------Explanation Panel*/
 
 $("#start-button").click(function () {
-  $(".explanation-panel").css("display", "none")
+  $(".explanation-panel").addClass("explanation-zoom-out")
 });
 
 $("#back-button").click(function () {

@@ -22,6 +22,24 @@ body {
 
 /*-------------------------Riddle */
 
+.bg-riddle {
+  overflow: hidden;
+  margin: 6px;
+
+  animation-name: riddle-zoom;
+  animation-duration: 5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes riddle-zoom {
+  from {
+    transform: scale(0.00001);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
 /*-------------------------Riddle Explanation Panel */
 
 .explanation-panel {
@@ -37,6 +55,34 @@ body {
   border: solid #c7c776;
   border-width: 5px;
   padding: 15px;
+
+  animation-name: explanation-zoom;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes explanation-zoom {
+  from {
+    transform: scale(0.00001);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+.explanation-zoom-out {
+  animation-name: explanation-zoom-out;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes explanation-zoom-out {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0.00001);
+  }
 }
 
 #explanation {
