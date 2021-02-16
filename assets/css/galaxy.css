@@ -42,6 +42,38 @@ body {
   background-position: center;
 }
 
+/* Header and Footer Animation*/
+
+header {
+  animation-name: header-drop;
+  animation-duration: 2.4s;
+  animation-timing-function: ease-in;
+}
+
+@keyframes header-drop {
+  0% {
+    transform: translate(0px, -200px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+footer {
+  animation-name: footer-rise;
+  animation-duration: 2.4s;
+  animation-timing-function: ease-in;
+}
+
+@keyframes footer-rise {
+  0% {
+    transform: translate(0, 200px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
 header {
   display: flex;
   align-items: center;
@@ -177,6 +209,44 @@ footer {
   to {
     transform: scale(1);
   }
+}
+
+.intro-para-zoom-out {
+  animation-name: intro-para-zoom-out;
+  animation-duration: 5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes intro-para-zoom-out {
+  0% {
+    transform: scale(1);
+  }
+  20% {
+    transform: scale(1.15);
+  }
+  100% {
+    transform: scale(0.00001);
+  }
+}
+
+.galaxy-zoom {
+  animation-name: galaxy-zoom;
+  animation-duration: 10s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes galaxy-zoom {
+  0% {
+    background-size: 100%;
+  }
+  100% {
+    background-size: 999%;
+  }
+}
+
+a {
+  color: inherit;
 }
 
 #galaxy-button {
