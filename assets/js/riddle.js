@@ -229,4 +229,28 @@ $(document).ready(function () {
             $("#F5").addClass("beer");
     }
 
+ /*-------------------------Einstein Picture Rotation*/
+
+    let index = 0;
+    function rotate() {
+        const einsteinRotation = [
+            "with-hand-2.jpg", "with-hand-3.jpg", "with-hand-4.jpg",
+            "right-1.jpg", "right-2.jpg", "right-3.jpg",
+            "left-1.jpg", "left-2.jpg", "left-3.jpg",
+            "right-1.jpg", "right-2.jpg", "right-3.jpg", "right-4.jpg",
+            "with-hand-2.jpg", "with-hand-3.jpg", "with-hand-4.jpg"
+        ];
+
+        index++
+        if (index == einsteinRotation.length) {
+            index = 0;
+        }
+
+        let image = "assets/images/einstein-animation/" + einsteinRotation[index];
+
+        document.getElementById("einstein-pic").src = image;
+    }
+
+    let picRotationInterval = setInterval(rotate, 800);
+
 }); /* Closing Curly Bracket*/
