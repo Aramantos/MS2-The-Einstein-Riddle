@@ -76,7 +76,8 @@ $(document).ready(function () {
             return result;
         });
         if (result == true) {
-
+            $("#fish-victory").css("display", "block");
+            /* --- CREDIT: Image: https://gifprint.s3.amazonaws.com/p/gif/91022/01da72904cf201382527266021f15734.gif --- */
             { $("#einstein-pic").attr("src", "assets/images/einstein-victory.gif") };
             /* --- CREDIT: Image: https://wifflegif.com/gifs/662977-albert-einstein-insanity-gif --- */
         }
@@ -209,5 +210,7 @@ $(document).ready(function () {
         if (answerArray[4][4].crosscheck() === $("#F5").val().crosscheck()) // Beer Bottles Background
             $("#F5").addClass("beer");
     }
+
+
 
 }); /* Closing Curly Bracket*/
