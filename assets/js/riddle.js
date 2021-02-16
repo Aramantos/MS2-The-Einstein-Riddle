@@ -44,6 +44,10 @@ $(document).ready(function () {
     };
 
     $(".answers").on("change", function () {
+
+        if ($(this).val().crosscheck() !== riddleAnswers[this.id].crosscheck()) { // Clears input field if wrong answer value is inputted
+            $(this).val("");
+        }
             
         riddleCorrect();
 
