@@ -183,3 +183,40 @@ body {
   border-color: white;
   color: #c3bdbd;
 }
+
+/*------------- Drinks */
+
+.water {
+  background-image: url(/assets/images/drinks/water.jpeg);
+  background-size: contain;
+  border-color: black;
+  color: rgba(0, 0, 0, 0);
+}
+
+.tea {
+  background-image: url(/assets/images/drinks/tea.jpeg);
+  background-size: contain;
+  border-color: black;
+  color: rgba(0, 0, 0, 0);
+}
+
+.milk {
+  background-image: url(/assets/images/drinks/milk.jpeg);
+  background-size: contain;
+  border-color: white;
+  color: rgba(0, 0, 0, 0);
+}
+
+.coffee {
+  background-image: url(/assets/images/drinks/coffee.jpg);
+  background-size: contain;
+  border-color: black;
+  color: rgba(0, 0, 0, 0);
+}
+
+.beer {
+  background-image: url(/assets/images/drinks/beer.jpeg);
+  background-size: contain;
+  border-color: black;
+  color: rgba(0, 0, 0, 0);
+}

@@ -62,6 +62,8 @@ $(document).ready(function () {
         nationalitiesFlags(); // Changes background of nationalities row inputs when correct value is entered
         houseInput(); // When correct answer is entered the input border and/or background changes colour to highlight corresponding colour
         smokingAnswer(); // When correct answer is entered smoking gif is shown in the background
+        drinksAnswer(); // When correct answer is inputted the background image changes to a picture of the corresponding answer
+
 
     });
 
@@ -188,6 +190,24 @@ $(document).ready(function () {
 
         if (answerArray[3][4].crosscheck() === $("#F4").val().crosscheck())
             $("#F4").addClass("smoking-answer");
+    }
+
+    function drinksAnswer() { // When correct answer is inputted the background image changes to a picture of the corresponding answer
+
+        if (answerArray[4][0].crosscheck() === $("#B5").val().crosscheck()) // Water Glasses Background
+            $("#B5").addClass("water");
+
+        if (answerArray[4][1].crosscheck() === $("#C5").val().crosscheck()) // Tea Cups Background
+            $("#C5").addClass("tea");
+
+        if (answerArray[4][2].crosscheck() === $("#D5").val().crosscheck()) // Glasses of Milk Background
+            $("#D5").addClass("milk");
+
+        if (answerArray[4][3].crosscheck() === $("#E5").val().crosscheck()) // Coffee Cups Background
+            $("#E5").addClass("coffee");
+
+        if (answerArray[4][4].crosscheck() === $("#F5").val().crosscheck()) // Beer Bottles Background
+            $("#F5").addClass("beer");
     }
 
 }); /* Closing Curly Bracket*/
