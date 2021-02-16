@@ -61,7 +61,7 @@ $(document).ready(function () {
         clueCorrect(); // Crosses out clue when corresponding answers are in the correct value fields
         nationalitiesFlags(); // Changes background of nationalities row inputs when correct value is entered
         houseInput(); // When correct answer is entered the input border and/or background changes colour to highlight corresponding colour
-
+        smokingAnswer(); // When correct answer is entered smoking gif is shown in the background
 
     });
 
@@ -170,6 +170,24 @@ $(document).ready(function () {
 
         if (answerArray[1][4].crosscheck() === $("#F2").val().crosscheck())
             $("#F2").addClass("white-input");
+    }
+
+    function smokingAnswer() { // When correct answer is entered smoking gif is shown in the background
+
+        if (answerArray[3][0].crosscheck() === $("#B4").val().crosscheck())
+            $("#B4").addClass("smoking-answer");
+
+        if (answerArray[3][1].crosscheck() === $("#C4").val().crosscheck())
+            $("#C4").addClass("smoking-answer");
+
+        if (answerArray[3][2].crosscheck() === $("#D4").val().crosscheck())
+            $("#D4").addClass("smoking-answer");
+
+        if (answerArray[3][3].crosscheck() === $("#E4").val().crosscheck())
+            $("#E4").addClass("smoking-answer");
+
+        if (answerArray[3][4].crosscheck() === $("#F4").val().crosscheck())
+            $("#F4").addClass("smoking-answer");
     }
 
 }); /* Closing Curly Bracket*/
