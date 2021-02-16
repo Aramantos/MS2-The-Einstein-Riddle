@@ -52,6 +52,10 @@ $(document).ready(function () {
         if ($(this).val().crosscheck() !== riddleAnswers[this.id].crosscheck()) { // Clears input field if wrong answer value is inputted
             $(this).val("");
         }
+
+        if ($(this).val().crosscheck() === riddleAnswers[this.id].crosscheck()) {
+            $(this).prop("disabled", true).css("background-color", "white"); // Disables input if correct answer is entered
+        }
             
         riddleCorrect(); // Checks all answers are correct, then changes picture to einstein-victory.gif
         clueCorrect(); // Crosses out clue when corresponding answers are in the correct value fields
