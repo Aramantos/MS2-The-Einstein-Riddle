@@ -145,3 +145,32 @@ body {
   border-color: white;
   color: rgba(0, 0, 0, 0);
 }
+
+/*------------- House Colours */
+
+.yellow-input {
+  border-color: #caca27;
+  color: #caca27;
+  background-color: black !important;
+}
+
+.blue-input {
+  border-color: blue;
+  color: blue;
+}
+
+.red-input {
+  border-color: red;
+  color: red;
+}
+
+.green-input {
+  border-color: green;
+  color: green;
+}
+
+.white-input {
+  border-color: #d6c5c5;
+  color: #d6c5c5;
+  background-color: black !important;
+}

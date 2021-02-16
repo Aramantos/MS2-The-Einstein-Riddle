@@ -60,6 +60,8 @@ $(document).ready(function () {
         riddleCorrect(); // Checks all answers are correct, then changes picture to einstein-victory.gif
         clueCorrect(); // Crosses out clue when corresponding answers are in the correct value fields
         nationalitiesFlags(); // Changes background of nationalities row inputs when correct value is entered
+        houseInput(); // When correct answer is entered the input border and/or background changes colour to highlight corresponding colour
+
 
     });
 
@@ -150,6 +152,24 @@ $(document).ready(function () {
 
         if (answerArray[0][4].crosscheck() === $("#F1").val().crosscheck()) // Swedish Flag Background
             $("#F1").addClass("swede");
+    }
+
+    function houseInput() { // When correct answer is entered the input border and/or background changes colour to highlight corresponding colour
+
+        if (answerArray[1][0].crosscheck() === $("#B2").val().crosscheck())
+            $("#B2").addClass("yellow-input");
+
+        if (answerArray[1][1].crosscheck() === $("#C2").val().crosscheck())
+            $("#C2").addClass("blue-input");
+
+        if (answerArray[1][2].crosscheck() === $("#D2").val().crosscheck())
+            $("#D2").addClass("red-input");
+
+        if (answerArray[1][3].crosscheck() === $("#E2").val().crosscheck())
+            $("#E2").addClass("green-input");
+
+        if (answerArray[1][4].crosscheck() === $("#F2").val().crosscheck())
+            $("#F2").addClass("white-input");
     }
 
 }); /* Closing Curly Bracket*/
