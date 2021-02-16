@@ -106,3 +106,42 @@ body {
   width: 90%;
   font-weight: 800;
 }
+
+/*-------------------------Riddle Answer Changes*/
+
+/*------------- Nationality Flags */
+
+.norwegian {
+  background-image: url(/assets/images/flags/norwegian.jpeg);
+  background-size: contain;
+  border-color: white;
+  color: rgba(0, 0, 0, 0);
+}
+
+.dane {
+  background-image: url(/assets/images/flags/dane.png);
+  background-size: contain;
+  border-color: white;
+  color: rgba(0, 0, 0, 0);
+}
+
+.brit {
+  background-image: url(/assets/images/flags/brit.webp);
+  background-size: contain;
+  border-color: white;
+  color: rgba(0, 0, 0, 0);
+}
+
+.german {
+  background-image: url(/assets/images/flags/german.jpg);
+  background-size: contain;
+  border-color: white;
+  color: rgba(0, 0, 0, 0);
+}
+
+.swede {
+  background-image: url(/assets/images/flags/swede.png);
+  background-size: contain;
+  border-color: white;
+  color: rgba(0, 0, 0, 0);
+}

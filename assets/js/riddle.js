@@ -59,6 +59,7 @@ $(document).ready(function () {
             
         riddleCorrect(); // Checks all answers are correct, then changes picture to einstein-victory.gif
         clueCorrect(); // Crosses out clue when corresponding answers are in the correct value fields
+        nationalitiesFlags(); // Changes background of nationalities row inputs when correct value is entered
 
     });
 
@@ -131,6 +132,24 @@ $(document).ready(function () {
         if (answerArray[0][4].crosscheck() === $("#F1").val().crosscheck() &&
             answerArray[2][4].crosscheck() === $("#F3").val().crosscheck()) /*Swede and dogs*/
             $("#clue-2").addClass("line-through");
+    }
+
+    function nationalitiesFlags() { // Changes background of nationalities inputs when correct value is entered
+
+        if (answerArray[0][0].crosscheck() === $("#B1").val().crosscheck()) // Norwegian Flag Background
+            $("#B1").addClass("norwegian");
+
+        if (answerArray[0][1].crosscheck() === $("#C1").val().crosscheck()) // Danish Flag Background
+            $("#C1").addClass("dane");
+
+        if (answerArray[0][2].crosscheck() === $("#D1").val().crosscheck()) // British Flag Background
+            $("#D1").addClass("brit");
+
+        if (answerArray[0][3].crosscheck() === $("#E1").val().crosscheck()) // German Flag Background
+            $("#E1").addClass("german");
+
+        if (answerArray[0][4].crosscheck() === $("#F1").val().crosscheck()) // Swedish Flag Background
+            $("#F1").addClass("swede");
     }
 
 }); /* Closing Curly Bracket*/
