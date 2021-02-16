@@ -22,6 +22,50 @@ body {
 
 /*-------------------------Riddle */
 
+/*-------------------------Riddle Explanation Panel */
+
+.explanation-panel {
+  font-size: 240%;
+  position: absolute;
+  background-color: #000000b5;
+  width: 75%;
+  border-radius: 25px;
+  text-align: center;
+  margin: 5% 13%;
+
+  color: #c7c776;
+  border: solid #c7c776;
+  border-width: 5px;
+  padding: 15px;
+}
+
+#explanation {
+  margin: 0;
+}
+
+#explanation-buttons {
+  display: flex;
+  list-style: none;
+  justify-content: space-evenly;
+  margin: 0;
+}
+
+#start-button {
+  font-size: x-large;
+  color: #c7c776;
+  border: solid #c7c776;
+  border-width: 5px;
+  background-color: #000000b5;
+}
+
+#back-button {
+  font-size: x-large;
+  color: #c7c776;
+  border: solid #c7c776;
+  border-width: 5px;
+  background-color: #000000b5;
+}
+
 /*-------------------------Einstein Picture */
 
 .einstein {
