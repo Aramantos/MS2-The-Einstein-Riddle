@@ -294,3 +294,15 @@ a {
   background-color: #c581c5;
   color: #621063;
 }
+
+/*-------------------------Media Queries */
+
+@media screen and (max-height: 890px) {
+  #social-links {
+    margin: 5px 60px;
+  }
+
+  .fa-2x {
+    font-size: 1.5em;
+  }
+}
