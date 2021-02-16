@@ -109,6 +109,23 @@ body {
 
 /*-------------------------Riddle Answer Changes*/
 
+/* House Transformations */
+
+.house-transform {
+  animation-name: house-transform;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes house-transform {
+  0% {
+    transform: scale(1) rotate(0deg);
+  }
+  50% {
+    transform: scale(3) rotate(720deg);
+  }
+}
+
 /*------------- Nationality Flags */
 
 .norwegian {
@@ -147,6 +164,26 @@ body {
 }
 
 /*------------- House Colours */
+
+.yellow-house {
+  color: #caca27;
+}
+
+.blue-house {
+  color: blue;
+}
+
+.red-house {
+  color: red;
+}
+
+.green-house {
+  color: green;
+}
+
+.white-house {
+  color: #d6c5c5;
+}
 
 .yellow-input {
   border-color: #caca27;

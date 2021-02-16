@@ -60,10 +60,10 @@ $(document).ready(function () {
         riddleCorrect(); // Checks all answers are correct, then changes picture to einstein-victory.gif
         clueCorrect(); // Crosses out clue when corresponding answers are in the correct value fields
         nationalitiesFlags(); // Changes background of nationalities row inputs when correct value is entered
+        houseColour(); // Changes house icon colour to the corresponding colour of the correct answer
         houseInput(); // When correct answer is entered the input border and/or background changes colour to highlight corresponding colour
         smokingAnswer(); // When correct answer is entered smoking gif is shown in the background
         drinksAnswer(); // When correct answer is inputted the background image changes to a picture of the corresponding answer
-
 
     });
 
@@ -157,6 +157,24 @@ $(document).ready(function () {
             $("#F1").addClass("swede");
     }
 
+    function houseColour() { // Changes house icon colour and initates animation when the corresponding correct answer is entered
+
+        if (answerArray[1][0].crosscheck() === $("#B2").val().crosscheck())
+            $("#house-1").addClass("yellow-house house-transform");
+
+        if (answerArray[1][1].crosscheck() === $("#C2").val().crosscheck())
+            $("#house-2").addClass("blue-house house-transform");
+
+        if (answerArray[1][2].crosscheck() === $("#D2").val().crosscheck())
+            $("#house-3").addClass("red-house house-transform");
+
+        if (answerArray[1][3].crosscheck() === $("#E2").val().crosscheck())
+            $("#house-4").addClass("green-house house-transform");
+
+        if (answerArray[1][4].crosscheck() === $("#F2").val().crosscheck())
+            $("#house-5").addClass("white-house house-transform");
+    }
+
     function houseInput() { // When correct answer is entered the input border and/or background changes colour to highlight corresponding colour
 
         if (answerArray[1][0].crosscheck() === $("#B2").val().crosscheck())
@@ -210,7 +228,5 @@ $(document).ready(function () {
         if (answerArray[4][4].crosscheck() === $("#F5").val().crosscheck()) // Beer Bottles Background
             $("#F5").addClass("beer");
     }
-
-
 
 }); /* Closing Curly Bracket*/
