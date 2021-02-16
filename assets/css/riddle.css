@@ -6,6 +6,20 @@ body {
   background-color: #fffef2;
 }
 
+/*-------------------------Text-Alterations */
+
+.underline {
+  text-decoration: underline;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.line-through {
+  text-decoration: line-through;
+}
+
 /*-------------------------Riddle */
 
 /*-------------------------Einstein Picture */

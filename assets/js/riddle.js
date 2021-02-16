@@ -4,6 +4,10 @@ String.prototype.crosscheck = function () {
 
 $(document).ready(function () {
 
+    const answerArray = [["Norwegian", "Dane", "Brit", "German", "Swede"], ["yellow", "blue", "red", "green", "white"],
+    ["cats", "horses", "birds", "fish", "dogs"], ["Dunhill", "Blends", "Pall Mall", "Prince", "Bluemaster"],
+    ["water", "tea", "milk", "coffee", "beer"]];
+
     const riddleAnswers = {
 
         /* Nationalities */
@@ -49,7 +53,8 @@ $(document).ready(function () {
             $(this).val("");
         }
             
-        riddleCorrect();
+        riddleCorrect(); // Checks all answers are correct, then changes picture to einstein-victory.gif
+        clueCorrect(); // Crosses out clue when corresponding answers are in the correct value fields
 
     });
 
@@ -67,6 +72,61 @@ $(document).ready(function () {
             /* --- CREDIT: Image: https://wifflegif.com/gifs/662977-albert-einstein-insanity-gif --- */
         }
         return result;
+    }
+
+    function clueCorrect() { // Crosses out specific clue when corresponding answer(s) are in the correct value fields
+
+        if (answerArray[0][0].crosscheck() === $("#B1").val().crosscheck()) /*Norwegian*/
+            $("#clue-9").addClass("line-through");
+
+        if (answerArray[4][2].crosscheck() === $("#D5").val().crosscheck()) /*milk*/
+            $("#clue-8").addClass("line-through");
+
+        if (answerArray[1][1].crosscheck() === $("#C2").val().crosscheck()) /*blue*/
+            $("#clue-14").addClass("line-through");
+
+        if (answerArray[1][3].crosscheck() === $("#E2").val().crosscheck() &&
+            answerArray[1][4].crosscheck() === $("#F2").val().crosscheck()) /*green and white*/
+            $("#clue-4").addClass("line-through");
+
+        if (answerArray[1][2].crosscheck() === $("#D2").val().crosscheck() &&
+            answerArray[0][2].crosscheck() === $("#D1").val().crosscheck()) /*red and Brit*/
+            $("#clue-1").addClass("line-through");
+
+        if (answerArray[4][3].crosscheck() === $("#E5").val().crosscheck()) /*coffee*/
+            $("#clue-5").addClass("line-through");
+
+        if (answerArray[3][0].crosscheck() === $("#B4").val().crosscheck()) /*Dunhill*/
+            $("#clue-7").addClass("line-through");
+
+        if (answerArray[2][1].crosscheck() === $("#C3").val().crosscheck()) /*horses*/
+            $("#clue-11").addClass("line-through");
+
+        if (answerArray[3][1].crosscheck() === $("#C4").val().crosscheck()) /*blends*/
+            $("#clue-15").addClass("line-through");
+
+        if (answerArray[3][4].crosscheck() === $("#F4").val().crosscheck() &&
+            answerArray[4][4].crosscheck() === $("#F5").val().crosscheck()) /*Bluemaster and beer*/
+            $("#clue-12").addClass("line-through");
+
+        if (answerArray[0][1].crosscheck() === $("#C1").val().crosscheck() &&
+            answerArray[4][1].crosscheck() === $("#C5").val().crosscheck()) /*Dane and tea*/
+            $("#clue-3").addClass("line-through");
+
+        if (answerArray[0][3].crosscheck() === $("#E1").val().crosscheck() &&
+            answerArray[3][3].crosscheck() === $("#E4").val().crosscheck()) /*German and Prince*/
+            $("#clue-13").addClass("line-through");
+
+        if (answerArray[2][2].crosscheck() === $("#D3").val().crosscheck() &&
+            answerArray[3][2].crosscheck() === $("#D4").val().crosscheck()) /*birds and Pall Mall*/
+            $("#clue-6").addClass("line-through");
+
+        if (answerArray[2][0].crosscheck() === $("#B3").val().crosscheck()) /*cats*/
+            $("#clue-10").addClass("line-through");
+
+        if (answerArray[0][4].crosscheck() === $("#F1").val().crosscheck() &&
+            answerArray[2][4].crosscheck() === $("#F3").val().crosscheck()) /*Swede and dogs*/
+            $("#clue-2").addClass("line-through");
     }
 
 }); /* Closing Curly Bracket*/
