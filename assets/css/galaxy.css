@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Titillium+Web&display=swap");
+
+/*-------------------------Colours */
+
+header {
+  background-color: #621063;
+}
+
+footer {
+  background-color: #621063;
+}
+
+.bg-riddle {
+  background-color: #fffef2;
+}
+
+/*-------------------------Body */
+
+body {
+  font-family: Titillium, sans-sarif;
+  overflow: hidden;
+}
+
+/*-------------------------Text-Alterations */
+
+.underline {
+  text-decoration: underline;
+}
+
+/*-------------------------Galaxy */
+
+#galaxy-image {
+  overflow: hidden;
+
+  max-width: 100%;
+  height: 100%;
+  background-image: url(../images/galaxy.gif);
+  /* --- CREDIT: Image: https://giphy.com/gifs/universe-spiral-galaxy-star-cluster-vortex-konczakowski-3og0IFrHkIglEOg8Ba --- */
+  background-color: black;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+}
+
+.para {
+  display: flex;
+  letter-spacing: 1.5px;
+  overflow: hidden;
+  color: #621063;
+  height: 66vh;
+}
+
+.intro-para {
+  width: 75%;
+  margin: auto;
+  font-weight: 800;
+  font-size: 140%;
+  text-align: center;
+  background-color: rgb(164, 164, 199, 0.7);
+  border: 5px;
+  border-color: #000;
+  border-radius: 25px;
+  list-style: none;
+  padding: 50px;
+}
+
+#galaxy-button {
+  color: #c581c5;
+  background-color: #621063;
+  padding: 10px;
+  margin-top: 30px;
+  font-weight: bold;
+  font-size: 120%;
+  border: 0;
+  border-radius: 25px;
+}
+
+#galaxy-button:hover {
+  background-color: #c581c5;
+  color: #621063;
+}
