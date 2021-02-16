@@ -1,11 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Coding Bootcamp Project" />
+    <meta name="keywords" content="HTML, CSS, JavaScript" />
+    <meta name="author" content="John Doyle" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <link rel="stylesheet" href="assets/css/riddle.css" type="text/css" />
+
+    <title>The Eistein Riddle</title>
 </head>
-<body>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum recusandae magnam aliquam nulla id animi sequi, iusto, aspernatur quod laboriosam natus odit voluptatibus quidem debitis praesentium fugit, veniam quisquam molestias!</p>
+
+<body class="bg-riddle">
+    <img id="einstein-pic" class="einstein" src="assets/images/einstein.jpg" />
+    <section class="clues-controls">
+        <div class="clues">
+            <ul id="clue-list">
+                <li id="clue-1">The Brit lives in the red house.</li>
+                <li id="clue-2">The Swede keeps dogs as pets.</li>
+                <li id="clue-3">The Dane drinks tea.</li>
+                <li id="clue-4">
+                    The green house is on the left of the white house.
+                </li>
+                <li id="clue-5">The green house's owner drinks coffee.</li>
+                <li id="clue-6">The person who smokes Pall Mall rears birds.</li>
+                <li id="clue-7">The owner of the yellow house smokes Dunhill.</li>
+                <li id="clue-8">The man living in the centre house drinks milk.</li>
+                <li id="clue-9">The Norwegian lives in the first house.</li>
+                <li id="clue-10">
+                    The man who smokes blends lives next to the one who keeps cats.
+                </li>
+                <li id="clue-11">
+                    The man who keeps horses lives next to the man who smokes Dunhill.
+                </li>
+                <li id="clue-12">The owner who smokes Bluemaster drinks beer.</li>
+                <li id="clue-13">The German smokes Prince.</li>
+                <li id="clue-14">The Norwegian lives next to the blue house.</li>
+                <li id="clue-15">
+                    The man who smokes Blends has a neighbour who drinks water.
+                </li>
+            </ul>
+            <h4 id="riddle-question" class="underline">Who owns the fish?</h4>
+        </div>
+        <div class="controls">
+            <div class="user-controls buttons">
+                <button id="hint-button">Hint</button>
+                <button id="clues-button" disabled>Clues</button>
+                <button id="notepad-button">Notepad</button>
+                <span class="time" id="timer-clock">00:00:00</span>
+            </div>
+        </div>
+    </section>
+
+    <form>
+        <table class="riddle-table">
+            <tr>
+                <th class="riddle-headers" id="A1">Nationality</th>
+                <td>
+                    <input autocomplete="off" type="text" name="B1" id="B1" data-value="B1" class="answers" />
+                </td>
+                <td>
+                    <input autocomplete="off" type="text" name="C1" id="C1" data-value="C1" class="answers" />
+                </td>
+                <td>
+                    <input autocomplete="off" type="text" name="D1" id="D1" data-value="D1" class="answers" />
+                </td>
+                <td>
+                    <input autocomplete="off" type="text" name="E1" id="E1" data-value="E1" class="answers" />
+                </td>
+                <td>
+                    <input autocomplete="off" type="text" name="F1" id="F1" data-value="F1" class="answers" />
+                </td>
+            </tr>
+            <tr>
+                <th class="riddle-headers" id="A2">Colour</th>
+                <td>
+                    <input autocomplete="off" type="text" name="B2" id="B2" data-value="B2" class="answers" />
+                </td>
+                <td>
+                    <input autocomplete="off" type="text" name="C2" id="C2" data-value="C2" class="answers" />
+                </td>
+                <td>
+                    <input autocomplete="off" type="text" name="D2" id="D2" data-value="D2" class="answers" />
+                </td>
+                <td>
+                    <input autocomplete="off" type="text" name="E2" id="E2" data-value="E2" class="answers" />
+                </td>
+                <td>
+                    <input autocomplete="off" type="text" name="F2" id="F2" data-value="F2" class="answers" />
+                </td>
+            </tr>
+            <tr>
+                <th class="riddle-headers" id="A3">Pets</th>
+                <td>
+                    <input autocomplete="off" type="text" name="B3" id="B3" data-value="B3" class="answers pets" />
+                </td>
+                <td>
+                    <input autocomplete="off" type="text" name="C3" id="C3" data-value="C3" class="answers pets" />
+                </td>
+                <td>
+                    <input autocomplete="off" type="text" name="D3" id="D3" data-value="D3" class="answers pets" />
+                </td>
+                <td>
+                    <input autocomplete="off" type="text" name="E3" id="E3" data-value="E3" class="answers pets" />
+                </td>
+                <td>
+                    <input autocomplete="off" type="text" name="F3" id="F3" data-value="F3" class="answers pets" />
+                </td>
+            </tr>
+            <tr>
+                <th class="riddle-headers" id="A4">Smokes</th>
+                <td>
+                    <input autocomplete="off" type="text" name="B4" id="B4" data-value="B4" class="answers" />
+                </td>
+                <td>
+                    <input autocomplete="off" type="text" name="C4" id="C4" data-value="C4" class="answers" />
+                </td>
+                <td>
+                    <input autocomplete="off" type="text" name="D4" id="D4" data-value="D4" class="answers" />
+                </td>
+                <td>
+                    <input autocomplete="off" type="text" name="E4" id="E4" data-value="E4" class="answers" />
+                </td>
+                <td>
+                    <input autocomplete="off" type="text" name="F4" id="F4" data-value="F4" class="answers" />
+                </td>
+            </tr>
+            <tr>
+                <th class="riddle-headers" id="A5">Beverage</th>
+                <td>
+                    <input autocomplete="off" type="text" name="B5" id="B5" data-value="B5" class="answers" />
+                </td>
+                <td>
+                    <input autocomplete="off" type="text" name="C5" id="C5" data-value="C5" class="answers" />
+                </td>
+                <td>
+                    <input autocomplete="off" type="text" name="D5" id="D5" data-value="D5" class="answers" />
+                </td>
+                <td>
+                    <input autocomplete="off" type="text" name="E5" id="E5" data-value="E5" class="answers" />
+                </td>
+                <td>
+                    <input autocomplete="off" type="text" name="F5" id="F5" data-value="F5" class="answers" />
+                </td>
+            </tr>
+        </table>
+    </form>
 </body>
+
 </html>
