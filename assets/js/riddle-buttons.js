@@ -10,3 +10,12 @@ $("#back-button").click(function () {
   }, 2000);
   $(".bg-riddle").addClass("riddle-zoom-out")
 });
+
+/*-------------------------Game Breaking Reset Button*/
+
+$("#reset-button").click(function () {
+  setTimeout(function () {
+    window.location.pathname = "riddle.html"
+  }, 2000);
+  $(".bg-riddle").addClass("riddle-zoom-out")
+});
