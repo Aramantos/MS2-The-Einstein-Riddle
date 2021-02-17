@@ -23,9 +23,15 @@ $("#hint-button").click(function () {
     $("#clues-button").prop("disabled", false)
 });
 
+var hintCount = 0;
+
 $("#hint-yes").click(function () {
+    hintCount++;
   $("#hint-checker").css("display", "none")
   $("#hint-text").css("display", "block")
+  $("#hints-used").text(function () {
+    return "Hints Used:" + hintCount
+    })
 });
 
 $("#hint-no").click(function () {
