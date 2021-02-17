@@ -44,14 +44,19 @@ $(document).ready(function () {
         D5: "milk",
         E5: "coffee",
         F5: "beer"
-
     };
+
+    let correctAnswer = false; // variable to allow picture to change when correct answer is inputted
 
     $(".answers").on("change", function () {
 
         if ($(this).val().crosscheck() !== riddleAnswers[this.id].crosscheck()) { // Clears input field if wrong answer value is inputted
             $(this).val("");
         }
+
+        else {
+            correctAnswer = true // Injects wink.pic into rotation temporarily
+        };
 
         if ($(this).val().crosscheck() === riddleAnswers[this.id].crosscheck()) {
             $(this).prop("disabled", true).css("background-color", "white"); // Disables input if correct answer is entered
@@ -232,6 +237,7 @@ $(document).ready(function () {
  /*-------------------------Einstein Picture Rotation*/
 
     let index = 0;
+
     function rotate() {
         const einsteinRotation = [
             "with-hand-2.jpg", "with-hand-3.jpg", "with-hand-4.jpg",
@@ -247,6 +253,11 @@ $(document).ready(function () {
         }
 
         let image = "assets/images/einstein-animation/" + einsteinRotation[index];
+
+        if (correctAnswer) {
+            image = "assets/images/einstein-animation/wink.jpg";
+            correctAnswer = false;
+        }
 
         document.getElementById("einstein-pic").src = image;
     }
