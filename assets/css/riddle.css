@@ -195,6 +195,15 @@ th {
   font-size: 100%;
 }
 
+/*-------------Timer */
+
+#timer-clock {
+  font-family: none;
+  border: double;
+  padding: 5px 10px;
+  margin: -2px 0 -2px;
+}
+
 /*-------------Hint */
 
 #hint {
