@@ -13,6 +13,14 @@ $("#back-button").click(function () {
 
 /*-------------------------User Controls*/
 
+$("#clues-button").click(function () {
+  $(".clues").css("display", "block") &&
+    $("#notepad").css("display", "none") &&
+    $("#clues-button").prop("disabled", true) &&
+    $("#notepad-button").prop("disabled", false) &&
+    $("#hint-button").prop("disabled", false)
+});
+
 $("#notepad-button").click(function () {
   $("#notepad").css("display", "flex") &&
     $(".clues").css("display", "none") &&
