@@ -20,6 +20,23 @@ body {
   text-decoration: line-through;
 }
 
+/*-------------------------Typography */
+
+body {
+  font-family: cursive, sans-sarif;
+  letter-spacing: 2px;
+}
+
+button {
+  font-family: cursive, sans-sarif;
+  letter-spacing: 1px;
+}
+
+th {
+  font-family: cursive, sans-sarif;
+  letter-spacing: 1px;
+}
+
 /*-------------------------Riddle */
 
 .bg-riddle {
