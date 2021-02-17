@@ -62,6 +62,9 @@ $(document).ready(function () {
             $("#reset-button").css("display", "block");
             $(".clues").css("display", "none");
             $(".controls").css("display", "none");
+            $("#hint").css("display", "none");
+            $("#notepad").css("display", "none");
+            $("#hint-checker").css("display", "none");
             return false
         }
         
@@ -125,13 +128,13 @@ $(document).ready(function () {
 
     function panelSwticher() { // When an answer in entered, it swtiches the clues-control panel back to clues
 
-        $(".clues").css("display", "block") &&
-            $("#notepad").css("display", "none") &&
-            $("#hint").css("display", "none") &&
-            $("#hint-checker").css("display", "none") &&
-            $("#no-hint").css("display", "none") &&
-            $("#clues-button").prop("disabled", true) &&
-            $("#notepad-button").prop("disabled", false) &&
+        $(".clues").css("display", "block")
+            $("#notepad").css("display", "none")
+            $("#hint").css("display", "none")
+            $("#hint-checker").css("display", "none")
+            $("#no-hint").css("display", "none")
+            $("#clues-button").prop("disabled", true)
+            $("#notepad-button").prop("disabled", false)
             $("#hint-button").prop("disabled", false)
     }
 

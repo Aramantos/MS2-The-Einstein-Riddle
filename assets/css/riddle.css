@@ -239,6 +239,21 @@ th {
   padding: 15px;
 }
 
+#hint-buttons {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 50px;
+}
+
+#hint-yes,
+#hint-no {
+  border: double;
+  margin: 0px 0px;
+  width: 45%;
+  font-weight: 900;
+  font-size: 75%;
+}
+
 #no-hint {
   display: none;
   align-items: center;
