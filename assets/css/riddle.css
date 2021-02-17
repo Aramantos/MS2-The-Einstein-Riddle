@@ -679,3 +679,166 @@ th {
   background-image: url(../images/confeti.gif);
   /* --- CREDIT: Image: https://gifer.com/en/6k2 --- */
 }
+
+/* -------------------------Media Queries */
+
+@media screen and (max-height: 950px) {
+  .clues {
+    height: 80%;
+  }
+  #notepad {
+    height: 85.2%;
+  }
+  #hint {
+    height: 80%;
+  }
+  #no-hint {
+    height: 80%;
+  }
+}
+
+@media screen and (max-height: 950px) {
+  .user-controls {
+    font-size: 90%;
+  }
+  .riddle-table{
+      height: 41.2vh;
+  }
+}
+
+@media screen and (max-height: 880px) {
+  .clues {
+    height: 79%;
+  }
+  #notepad {
+    height: 84.7%;
+  }
+  #hint {
+    height: 79%;
+  }
+  #no-hint {
+    height: 80%;
+  }
+
+  .user-controls {
+    font-size: 85%;
+  }
+}
+
+@media screen and (max-height: 860px) {
+  .clues {
+    height: 78%;
+  }
+  #notepad {
+    height: 83.7%;
+  }
+  #hint {
+    height: 78%;
+  }
+  #no-hint {
+    height: 80%;
+  }
+
+  .explanation-panel {
+    font-size: 220%;
+  }
+}
+
+@media screen and (max-height: 825px) {
+  .user-controls {
+    font-size: 75%;
+  }
+}
+
+@media screen and (max-width: 1370px) {
+  .explanation-panel {
+    font-size: 220%;
+  }
+}
+
+@media screen and (max-width: 1314px) {
+  #hint-checker {
+    height: 32%;
+    margin: 50px 2.5% 0;
+  }
+
+  #hint-text {
+    padding: 55px;
+  }
+
+  #no-hint {
+    height: 78%;
+  }
+
+  #no-hint-text {
+    padding: 55px;
+  }
+}
+
+@media screen and (max-width: 1314px) {
+  #hint-checker {
+    font-size: 148%;
+    height: 32%;
+    margin: 50px 3.2% 0;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  #hint-checker {
+    font-size: 135%;
+    padding-top: 30px;
+  }
+}
+
+@media screen and (max-width: 1160px) {
+  .explanation-panel {
+    font-size: 170%;
+  }
+
+  #hint-checker {
+    margin: 50px 2.5% 0;
+  }
+
+  #hint-text {
+    padding: 35px;
+  }
+
+  #no-hint-text {
+    padding: 35px;
+  }
+
+  .clues-controls {
+    width: 48%;
+  }
+}
+
+@media screen and (max-width: 1112px) {
+  #hint-checker {
+    font-size: 125%;
+    padding-top: 45px;
+    margin: 50px 2.2% 0;
+  }
+  #hint-text {
+    padding: 30px;
+  }
+
+  #no-hint-text {
+    padding: 30px;
+  }
+}
+
+@media screen and (max-width: 1045px) {
+  #hint-checker {
+    padding-top: 30px;
+    height: 32%;
+    margin: 43px 2.2% 0;
+    font-size: 120%;
+  }
+  #hint-text {
+    padding: 25px;
+  }
+
+  #no-hint-text {
+    padding: 25px;
+  }
+}
