@@ -188,6 +188,22 @@ th {
   justify-content: space-evenly;
 }
 
+/*-------------Notepad */
+
+#notepad {
+  display: none;
+  height: 86.7%;
+  width: 100%;
+}
+
+#textarea {
+  margin-top: 2vh;
+  height: 93.8%;
+  width: 100%;
+  resize: none;
+  border: double;
+}
+
 /*-------------------------Riddle Table */
 
 .riddle-table {
