@@ -206,6 +206,19 @@ th {
   padding: 75px;
 }
 
+#hint-checker {
+  display: none;
+  height: 30%;
+  width: 40%;
+  text-align: center;
+  position: absolute;
+  font-size: 150%;
+  background-color: #c7c776;
+  border: double;
+  margin: 80px 3.5% 0;
+  padding: 15px;
+}
+
 /*-------------Notepad */
 
 #notepad {
