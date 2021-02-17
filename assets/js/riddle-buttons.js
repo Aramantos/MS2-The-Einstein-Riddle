@@ -80,3 +80,11 @@ $("#return-galaxy").click(function () {
   }, 2000);
   $(".bg-riddle").addClass("riddle-zoom-out")
 });
+
+var cats = new Audio('./assets/media/cat.mp4')
+
+$("#feed-the-cat").click(function () {
+  $("#fish-victory").css("display", "none") &&
+    $("#feed-the-cat").prop("disabled", true)
+  cats.play();
+});

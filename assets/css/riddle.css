@@ -533,7 +533,8 @@ th {
 }
 
 #finished-reset,
-#return-galaxy{
+#return-galaxy,
+#feed-the-cat {
   margin: 0px 0px;
   width: 30%;
   font-weight: 900;
