@@ -613,3 +613,8 @@ th {
     transform: scale(1.3) rotate(360deg);
   }
 }
+
+.confeti {
+  background-image: url(../images/confeti.gif);
+  /* --- CREDIT: Image: https://gifer.com/en/6k2 --- */
+}

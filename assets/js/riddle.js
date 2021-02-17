@@ -107,6 +107,9 @@ $(document).ready(function () {
             $("#hint-checker").css("display", "none");
             $(".controls").css("display", "none");
             $("#fish-victory").css("display", "block");
+            $(".bg-riddle").addClass("confeti");
+            $(".riddle-table").addClass("confeti");
+            $(".clues-controls").addClass("confeti");
             /* --- CREDIT: Image: https://gifprint.s3.amazonaws.com/p/gif/91022/01da72904cf201382527266021f15734.gif --- */
             clearInterval(picRotationInterval);
             { $("#einstein-pic").attr("src", "assets/images/einstein-victory.gif") };
