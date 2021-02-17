@@ -23,6 +23,11 @@ $("#hint-button").click(function () {
     $("#clues-button").prop("disabled", false)
 });
 
+$("#hint-yes").click(function () {
+  $("#hint-checker").css("display", "none")
+  $("#hint-text").css("display", "block")
+});
+
 $("#clues-button").click(function () {
   $(".clues").css("display", "block") &&
     $("#notepad").css("display", "none") &&
