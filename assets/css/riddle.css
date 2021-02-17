@@ -505,3 +505,110 @@ th {
   display: none;
   position: absolute;
 }
+
+.congratulations {
+  display: none;
+  height: 66%;
+  width: 100%;
+  margin-top: 20%;
+}
+
+#two-percent {
+  font-size: 200%;
+  text-align: center;
+}
+
+#hints-timer-display {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#congrats-buttons {
+  height: 3vh;
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#finished-reset,
+#return-galaxy{
+  margin: 0px 0px;
+  width: 30%;
+  font-weight: 900;
+  font-size: 100%;
+}
+
+#container {
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 5px;
+}
+
+#row {
+  width: 70%;
+  margin: 0;
+  justify-content: space-evenly;
+}
+
+#contact {
+  font-size: 120%;
+  font-weight: bold;
+  letter-spacing: 5px;
+  text-align: center;
+}
+
+#email {
+  margin: 0;
+}
+
+#number {
+  margin: 0;
+}
+
+#social {
+  text-align: center;
+}
+
+#social-links {
+  list-style: none;
+  display: flex;
+  margin: auto;
+  padding: 0;
+}
+
+.social-link {
+  margin: auto;
+}
+
+/* Social Links styles & color change animation */
+
+#social-links li a i {
+  margin-top: 5px;
+  margin-bottom: 0;
+  padding: 5px;
+  border-radius: 50%;
+  text-align: center;
+  color: #c7c776;
+  background: #fffef2;
+  transition: all 0.35s ease-in-out;
+  -moz-transition: all 0.35s ease-in-out;
+  -webkit-transition: all 0.35s ease-in-out;
+  -o-transition: all 0.35s ease-in-out;
+}
+
+#social-links li a i:hover {
+  animation-name: social-links-zoom;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes social-links-zoom {
+  from {
+    transform: scale(1) rotate(0deg);
+  }
+  to {
+    transform: scale(1.3) rotate(360deg);
+  }
+}
