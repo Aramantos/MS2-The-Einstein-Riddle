@@ -219,6 +219,23 @@ th {
   padding: 15px;
 }
 
+#no-hint {
+  display: none;
+  align-items: center;
+  text-align: center;
+  font-size: xx-large;
+  height: 82%;
+  width: 99%;
+  margin-top: 20px;
+  border: double;
+  background-color: #fffef2;
+}
+
+#no-hint-text {
+  padding: 110px;
+  font-size: 135%;
+}
+
 /*-------------Notepad */
 
 #notepad {

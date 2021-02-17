@@ -28,6 +28,12 @@ $("#hint-yes").click(function () {
   $("#hint-text").css("display", "block")
 });
 
+$("#hint-no").click(function () {
+  $("#hint").css("display", "none")
+  $("#hint-checker").css("display", "none")
+  $("#no-hint").css("display", "block")
+});
+
 $("#clues-button").click(function () {
   $(".clues").css("display", "block") &&
     $("#notepad").css("display", "none") &&
