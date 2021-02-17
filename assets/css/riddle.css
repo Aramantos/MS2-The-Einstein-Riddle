@@ -188,6 +188,13 @@ th {
   justify-content: space-evenly;
 }
 
+.user-controls button {
+  margin: 0px 0px;
+  width: 15%;
+  font-weight: 900;
+  font-size: 100%;
+}
+
 /*-------------Hint */
 
 #hint {
