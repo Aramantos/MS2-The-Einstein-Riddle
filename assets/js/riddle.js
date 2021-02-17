@@ -99,6 +99,13 @@ $(document).ready(function () {
             return result;
         });
         if (result == true) {
+            $(".congratulations").css("display", "block");
+            $(".clues").css("display", "none");
+            $("#hint").css("display", "none");
+            $("#no-hint").css("display", "none");
+            $("#notepad").css("display", "none");
+            $("#hint-checker").css("display", "none");
+            $(".controls").css("display", "none");
             $("#fish-victory").css("display", "block");
             /* --- CREDIT: Image: https://gifprint.s3.amazonaws.com/p/gif/91022/01da72904cf201382527266021f15734.gif --- */
             clearInterval(picRotationInterval);
