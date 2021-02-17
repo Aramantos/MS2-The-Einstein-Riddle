@@ -50,13 +50,18 @@ $(document).ready(function () {
 
     let incorrectAnswer = false; // variable to allow picture to change when wrong answer is inputted
 
-    $(".answers").on("change", function () {
-
+    $(".answers").on("change", function () { // If user attempts to break the game this function disables the riddle
+        if (breakingProtection($(this).val().crosscheck())) {
+            clearInterval(picRotationInterval);
+            { $("#einstein-pic").attr("src", "assets/images/einstein-animation/cheat-pic.jpg") };
+            $(".answers").prop("disabled", true);
+            return false
+        }
         if ($(this).val().crosscheck() !== riddleAnswers[this.id].crosscheck()) { // Clears input field if wrong answer value is inputted
             $(this).val("");
             incorrectAnswer = true // Injects wrong.pic into rotation temporarily
         }
-
+        
         else {
             correctAnswer = true // Injects wink.pic into rotation temporarily
         };
@@ -235,6 +240,25 @@ $(document).ready(function () {
 
         if (answerArray[4][4].crosscheck() === $("#F5").val().crosscheck()) // Beer Bottles Background
             $("#F5").addClass("beer");
+    }
+
+/*-------------------------Game Breaking Protection*/
+
+    const incorrectAnswerCount = { lastAnswer: "", count: 0 }
+
+    function breakingProtection(currentAnswer) {
+        if (incorrectAnswerCount.lastAnswer === currentAnswer)
+            incorrectAnswerCount.count++;
+        else {
+            incorrectAnswerCount.count = 0;
+        }
+
+        if (incorrectAnswerCount.count >= 3)
+            return true;
+        else {
+            incorrectAnswerCount.lastAnswer = currentAnswer
+            return false;
+        }
     }
 
  /*-------------------------Einstein Picture Rotation*/
