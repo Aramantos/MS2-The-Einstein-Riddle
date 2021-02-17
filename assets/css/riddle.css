@@ -348,6 +348,74 @@ body {
   color: rgba(0, 0, 0, 0);
 }
 
+/*-------------------------Breaking Game Changes*/
+
+.breaking-game-warning {
+  display: none;
+
+  font-size: 180%;
+  position: absolute;
+  background-color: #000000b5;
+  width: 95%;
+  height: 37.5%;
+  border-radius: 25px;
+  text-align: center;
+  margin: 0 1%;
+  margin-top: 36pc;
+  padding: 15px;
+  color: #c3bdbd;
+
+  animation-name: game-warning;
+  animation-duration: 2s;
+}
+
+@keyframes game-warning {
+  from {
+    transform: scale(0.00001);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+#warning-title {
+  font-size: 165%;
+}
+
+#reset-button {
+  display: none;
+  height: 90%;
+  width: 100%;
+  margin-top: 5%;
+
+  animation-name: reset-button;
+  animation-duration: 2s;
+}
+
+@keyframes reset-button {
+  from {
+    transform: scale(0.00001);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+.riddle-zoom-out {
+  animation-name: riddle-zoom-out;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes riddle-zoom-out {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0.00001);
+  }
+}
+
 /*-------------------------Winning Game Changes*/
 
 #fish-victory {

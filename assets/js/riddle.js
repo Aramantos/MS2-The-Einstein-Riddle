@@ -55,13 +55,17 @@ $(document).ready(function () {
             clearInterval(picRotationInterval);
             { $("#einstein-pic").attr("src", "assets/images/einstein-animation/cheat-pic.jpg") };
             $(".answers").prop("disabled", true);
+            $(".breaking-game-warning").css("display", "block");
+            $("#reset-button").css("display", "block");
+            $(".clues").css("display", "none");
+            $(".controls").css("display", "none");
             return false
         }
         if ($(this).val().crosscheck() !== riddleAnswers[this.id].crosscheck()) { // Clears input field if wrong answer value is inputted
             $(this).val("");
             incorrectAnswer = true // Injects wrong.pic into rotation temporarily
         }
-        
+
         else {
             correctAnswer = true // Injects wink.pic into rotation temporarily
         };
