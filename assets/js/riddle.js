@@ -89,6 +89,9 @@ $(document).ready(function () {
 
     function riddleCorrect() { // Checks all answers are correct, then changes picture to einstein-victory.gif
 
+        var celebration = new Audio('./assets/media/celebration.mp3')
+        /* --- CREDIT: Audio: https://vimeo.com/335541134 --- */
+
         let result = false;
 
         $(".answers").each(function () {
@@ -100,6 +103,7 @@ $(document).ready(function () {
             /* --- CREDIT: Image: https://gifprint.s3.amazonaws.com/p/gif/91022/01da72904cf201382527266021f15734.gif --- */
             { $("#einstein-pic").attr("src", "assets/images/einstein-victory.gif") };
             /* --- CREDIT: Image: https://wifflegif.com/gifs/662977-albert-einstein-insanity-gif --- */
+            celebration.play()
         }
         return result;
     }
