@@ -64,3 +64,19 @@ $("#reset-button").click(function () {
   }, 2000);
   $(".bg-riddle").addClass("riddle-zoom-out")
 });
+
+/*-------------------------Congratulation Buttons*/
+
+$("#finished-reset").click(function () {
+  setTimeout(function () {
+    window.location.pathname = "riddle.html"
+  }, 2000);
+  $(".bg-riddle").addClass("riddle-zoom-out")
+});
+
+$("#return-galaxy").click(function () {
+  setTimeout(function () {
+    window.location.pathname = "index.html"
+  }, 2000);
+  $(".bg-riddle").addClass("riddle-zoom-out")
+});
