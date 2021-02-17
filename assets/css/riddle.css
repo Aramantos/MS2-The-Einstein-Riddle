@@ -188,6 +188,24 @@ th {
   justify-content: space-evenly;
 }
 
+/*-------------Hint */
+
+#hint {
+  display: none;
+  align-items: center;
+  text-align: center;
+  font-size: xx-large;
+  height: 82%;
+  width: 99%;
+  margin-top: 20px;
+  border: double;
+  background-color: #fffef2;
+}
+
+#hint-text {
+  padding: 75px;
+}
+
 /*-------------Notepad */
 
 #notepad {

@@ -13,9 +13,19 @@ $("#back-button").click(function () {
 
 /*-------------------------User Controls*/
 
+$("#hint-button").click(function () {
+  $("#hint").css("display", "block") &&
+    $(".clues").css("display", "none") &&
+    $("#notepad").css("display", "none") &&
+    $("#hint-button").prop("disabled", true) &&
+    $("#notepad-button").prop("disabled", false) &&
+    $("#clues-button").prop("disabled", false)
+});
+
 $("#clues-button").click(function () {
   $(".clues").css("display", "block") &&
     $("#notepad").css("display", "none") &&
+    $("#hint").css("display", "none") &&
     $("#clues-button").prop("disabled", true) &&
     $("#notepad-button").prop("disabled", false) &&
     $("#hint-button").prop("disabled", false)
@@ -24,6 +34,7 @@ $("#clues-button").click(function () {
 $("#notepad-button").click(function () {
   $("#notepad").css("display", "flex") &&
     $(".clues").css("display", "none") &&
+    $("#hint").css("display", "none") &&
     $("#notepad-button").prop("disabled", true) &&
     $("#clues-button").prop("disabled", false) &&
     $("#hint-button").prop("disabled", false)
