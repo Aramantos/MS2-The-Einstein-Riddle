@@ -39,6 +39,7 @@ $("#clues-button").click(function () {
     $("#notepad").css("display", "none") &&
     $("#hint").css("display", "none") &&
     $("#hint-checker").css("display", "none") &&
+    $("#no-hint").css("display", "none") &&
     $("#clues-button").prop("disabled", true) &&
     $("#notepad-button").prop("disabled", false) &&
     $("#hint-button").prop("disabled", false)
@@ -49,6 +50,7 @@ $("#notepad-button").click(function () {
     $(".clues").css("display", "none") &&
     $("#hint").css("display", "none") &&
     $("#hint-checker").css("display", "none") &&
+    $("#no-hint").css("display", "none") &&
     $("#notepad-button").prop("disabled", true) &&
     $("#clues-button").prop("disabled", false) &&
     $("#hint-button").prop("disabled", false)
