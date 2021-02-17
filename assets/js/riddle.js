@@ -49,6 +49,8 @@ $(document).ready(function () {
     let correctAnswer = false; // variable to allow picture to change when correct answer is inputted
 
     let incorrectAnswer = false; // variable to allow picture to change when wrong answer is inputted
+    var incorrect = new Audio('./assets/media/incorrect.mp3')
+    /* --- CREDIT: Audio: https://www.youtube.com/watch?v=36_bISAhExo --- */
 
     $(".answers").on("change", function () { // If user attempts to break the game this function disables the riddle
         if (breakingProtection($(this).val().crosscheck())) {
@@ -64,6 +66,7 @@ $(document).ready(function () {
         if ($(this).val().crosscheck() !== riddleAnswers[this.id].crosscheck()) { // Clears input field if wrong answer value is inputted
             $(this).val("");
             incorrectAnswer = true // Injects wrong.pic into rotation temporarily
+            incorrect.play();
         }
 
         else {
