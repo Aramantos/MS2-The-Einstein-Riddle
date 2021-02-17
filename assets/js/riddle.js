@@ -77,6 +77,7 @@ $(document).ready(function () {
             $(this).prop("disabled", true).css("background-color", "white"); // Disables input if correct answer is entered
         }
             
+        panelSwticher(); // When an answer in entered, it swtiches the clues-control panel back to clues
         riddleCorrect(); // Checks all answers are correct, then changes picture to einstein-victory.gif
         clueCorrect(); // Crosses out clue when corresponding answers are in the correct value fields
         nationalitiesFlags(); // Changes background of nationalities row inputs when correct value is entered
@@ -117,6 +118,17 @@ $(document).ready(function () {
             celebration.play()
         }
         return result;
+    }
+
+    function panelSwticher() { // When an answer in entered, it swtiches the clues-control panel back to clues
+        $(".clues").css("display", "block") &&
+            $("#notepad").css("display", "none") &&
+            $("#hint").css("display", "none") &&
+            $("#hint-checker").css("display", "none") &&
+            $("#no-hint").css("display", "none") &&
+            $("#clues-button").prop("disabled", true) &&
+            $("#notepad-button").prop("disabled", false) &&
+            $("#hint-button").prop("disabled", false)
     }
 
     function clueCorrect() { // Crosses out specific clue when corresponding answer(s) are in the correct value fields
