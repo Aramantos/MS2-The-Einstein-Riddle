@@ -48,10 +48,13 @@ $(document).ready(function () {
 
     let correctAnswer = false; // variable to allow picture to change when correct answer is inputted
 
+    let incorrectAnswer = false; // variable to allow picture to change when wrong answer is inputted
+
     $(".answers").on("change", function () {
 
         if ($(this).val().crosscheck() !== riddleAnswers[this.id].crosscheck()) { // Clears input field if wrong answer value is inputted
             $(this).val("");
+            incorrectAnswer = true // Injects wrong.pic into rotation temporarily
         }
 
         else {
@@ -257,6 +260,11 @@ $(document).ready(function () {
         if (correctAnswer) {
             image = "assets/images/einstein-animation/wink.jpg";
             correctAnswer = false;
+        }
+
+        if (incorrectAnswer) {
+            image = "assets/images/einstein-animation/wrong-pic.jpg";
+            incorrectAnswer = false;
         }
 
         document.getElementById("einstein-pic").src = image;
