@@ -204,6 +204,10 @@ th {
   margin: -2px 0 -2px;
 }
 
+#timer-buttons {
+  display: none;
+}
+
 /*-------------Hint */
 
 #hint {
