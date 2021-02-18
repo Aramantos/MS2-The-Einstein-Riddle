@@ -473,11 +473,11 @@ th {
   position: absolute;
   background-color: #000000b5;
   width: 95%;
-  height: 37.5%;
+  height: 38.5%;
   border-radius: 25px;
   text-align: center;
   margin: 0 1%;
-  margin-top: 36pc;
+  margin-top: 57vh;
   padding: 15px;
   color: #c3bdbd;
 
@@ -695,14 +695,20 @@ th {
   #no-hint {
     height: 80%;
   }
-}
-
-@media screen and (max-height: 950px) {
   .user-controls {
     font-size: 90%;
   }
   .riddle-table{
-      height: 41.2vh;
+    height: 41.2vh;
+  }
+  #warning-title{
+    margin: 25px 0;
+  }
+}
+
+@media screen and (max-height: 950px) {
+  #warning-title{
+    margin: 20px 0;
   }
 }
 
@@ -783,6 +789,12 @@ th {
   }
 }
 
+@media screen and (max-width: 1230px) {
+    .breaking-game-warning{
+        font-size: 165%;
+    }
+}
+
 @media screen and (max-width: 1200px) {
   #hint-checker {
     font-size: 135%;
@@ -793,6 +805,10 @@ th {
 @media screen and (max-width: 1160px) {
   .explanation-panel {
     font-size: 170%;
+  }
+
+  .breaking-game-warning{
+    font-size: 160%;
   }
 
   #hint-checker {
@@ -812,6 +828,12 @@ th {
   }
 }
 
+@media screen and (max-width: 1125px) {
+    .breaking-game-warning{
+        font-size: 155%;
+    }
+}
+
 @media screen and (max-width: 1112px) {
   #hint-checker {
     font-size: 125%;
@@ -827,7 +849,17 @@ th {
   }
 }
 
+@media screen and (max-width: 1070px) {
+  .breaking-game-warning{
+        font-size: 150%;
+  }
+}
+
 @media screen and (max-width: 1045px) {
+
+  .breaking-game-warning{
+    font-size: 145%;
+  }
   #hint-checker {
     padding-top: 30px;
     height: 32%;
@@ -840,5 +872,12 @@ th {
 
   #no-hint-text {
     padding: 25px;
+  }
+}
+
+@media screen and (max-width: 1045px) {
+
+  .breaking-game-warning{
+    font-size: 140%;
   }
 }
