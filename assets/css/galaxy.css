@@ -243,7 +243,7 @@ footer {
 
 .intro-para-zoom-out {
   animation-name: intro-para-zoom-out;
-  animation-duration: 5s;
+  animation-duration: 3s;
   animation-fill-mode: forwards;
 }
 
@@ -271,7 +271,7 @@ footer {
     background-size: 100%;
   }
   100% {
-    background-size: 999%;
+    background-size: 6000%;
   }
 }
 
