@@ -82,10 +82,45 @@ resetButton.addEventListener("click", reset);
 
 // New Code
 
+// Timer Start 
+
 $(document).ready(function () {
 
     $("#start-button").click(function () {
         start();
-    })
+    });
+
+});
+
+// // Riddle Completetion Time Calculator
+
+let result = document.querySelector("#timer-final");
+
+var firstDateGrab;
+var secondDateGrab;
+
+$("#start-button").click(function () {
+    firstDateGrab = new Date();
+    console.log(firstDateGrab)
+});
+
+$(".answers").change(function () {
+    setTimeout(() => {
+        let elem = document.querySelector("#fish-victory");
+        let displayValue = window.getComputedStyle(elem, null).getPropertyValue('display');
+        console.log(elem)
+        console.log(displayValue)
+
+        if (displayValue == 'block') {
+            secondDateGrab = new Date();
+            console.log(secondDateGrab);
+
+            let ms = (secondDateGrab.getTime()) - (firstDateGrab.getTime());
+            let minute = 1000 * 60;
+
+            result.innerText = "Completion Time: " + parseInt(ms / minute) + " minutes" ;
+            console.log(result)
+        }
+    }, 25)
 
 });

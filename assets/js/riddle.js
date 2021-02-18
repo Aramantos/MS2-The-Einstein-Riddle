@@ -66,8 +66,8 @@ $(document).ready(function () {
             $("#notepad").css("display", "none");
             $("#hint-checker").css("display", "none");
             return false
-        }
-        
+        };
+
         if ($(this).val().crosscheck() !== riddleAnswers[this.id].crosscheck()) { // Clears input field if wrong answer value is inputted
             $(this).val("");
             incorrectAnswer = true // Injects wrong.pic into rotation temporarily
@@ -80,8 +80,8 @@ $(document).ready(function () {
 
         if ($(this).val().crosscheck() === riddleAnswers[this.id].crosscheck()) {
             $(this).prop("disabled", true).css("background-color", "white"); // Disables input if correct answer is entered
-        }
-            
+        };
+
         panelSwticher(); // When an answer in entered, it swtiches the clues-control panel back to clues
         riddleCorrect(); // Checks all answers are correct, then changes picture to einstein-victory.gif
         clueCorrect(); // Crosses out clue when corresponding answers are in the correct value fields
@@ -121,21 +121,21 @@ $(document).ready(function () {
             clearInterval(picRotationInterval);
             { $("#einstein-pic").attr("src", "assets/images/einstein-victory.gif") };
             /* --- CREDIT: Image: https://wifflegif.com/gifs/662977-albert-einstein-insanity-gif --- */
-            celebration.play()
-        }
+            celebration.play();
+        };
         return result;
-    }
+    };
 
     function panelSwticher() { // When an answer in entered, it swtiches the clues-control panel back to clues
 
-        $(".clues").css("display", "block")
-            $("#notepad").css("display", "none")
-            $("#hint").css("display", "none")
-            $("#hint-checker").css("display", "none")
-            $("#no-hint").css("display", "none")
-            $("#clues-button").prop("disabled", true)
-            $("#notepad-button").prop("disabled", false)
-            $("#hint-button").prop("disabled", false)
+        $(".clues").css("display", "block");
+        $("#notepad").css("display", "none");
+        $("#hint").css("display", "none");
+        $("#hint-checker").css("display", "none");
+        $("#no-hint").css("display", "none");
+        $("#clues-button").prop("disabled", true);
+        $("#notepad-button").prop("disabled", false);
+        $("#hint-button").prop("disabled", false);
     }
 
     function clueCorrect() { // Crosses out specific clue when corresponding answer(s) are in the correct value fields
@@ -366,7 +366,7 @@ $(document).ready(function () {
             $("#F5").addClass("beer");
     }
 
-/*-------------------------Game Breaking Protection*/
+    /*-------------------------Game Breaking Protection*/
 
     const incorrectAnswerCount = { lastAnswer: "", count: 0 }
 
@@ -375,17 +375,17 @@ $(document).ready(function () {
             incorrectAnswerCount.count++;
         else {
             incorrectAnswerCount.count = 0;
-        }
+        };
 
         if (incorrectAnswerCount.count >= 3)
             return true;
         else {
             incorrectAnswerCount.lastAnswer = currentAnswer
             return false;
-        }
-    }
+        };
+    };
 
- /*-------------------------Einstein Picture Rotation*/
+    /*-------------------------Einstein Picture Rotation*/
 
     let index = 0;
 
@@ -401,19 +401,19 @@ $(document).ready(function () {
         index++
         if (index == einsteinRotation.length) {
             index = 0;
-        }
+        };
 
         let image = "assets/images/einstein-animation/" + einsteinRotation[index];
 
         if (correctAnswer) {
             image = "assets/images/einstein-animation/wink.jpg";
             correctAnswer = false;
-        }
+        };
 
         if (incorrectAnswer) {
             image = "assets/images/einstein-animation/wrong-pic.jpg";
             incorrectAnswer = false;
-        }
+        };
 
         document.getElementById("einstein-pic").src = image;
     }

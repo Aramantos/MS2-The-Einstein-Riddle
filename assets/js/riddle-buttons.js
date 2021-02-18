@@ -14,52 +14,52 @@ $("#back-button").click(function () {
 /*-------------------------User Controls*/
 
 $("#hint-button").click(function () {
-  $("#hint").css("display", "block")
-    $(".clues").css("display", "none")
-    $("#notepad").css("display", "none")
-    $("#hint-checker").css("display", "block")
-    $("#hint-button").prop("disabled", true)
-    $("#notepad-button").prop("disabled", false)
-    $("#clues-button").prop("disabled", false)
+  $("#hint").css("display", "block");
+    $(".clues").css("display", "none");
+    $("#notepad").css("display", "none");
+    $("#hint-checker").css("display", "block");
+    $("#hint-button").prop("disabled", true);
+    $("#notepad-button").prop("disabled", false);
+    $("#clues-button").prop("disabled", false);
 });
 
 var hintCount = 0;
 
 $("#hint-yes").click(function () {
     hintCount++;
-  $("#hint-checker").css("display", "none")
-  $("#hint-text").css("display", "block")
+  $("#hint-checker").css("display", "none");
+  $("#hint-text").css("display", "block");
   $("#hints-used").text(function () {
-    return "Hints Used:" + hintCount
-    })
+    return "Hints Used: " + hintCount
+    });
 });
 
 $("#hint-no").click(function () {
-  $("#hint").css("display", "none")
-  $("#hint-checker").css("display", "none")
-  $("#no-hint").css("display", "block")
+  $("#hint").css("display", "none");
+  $("#hint-checker").css("display", "none");
+  $("#no-hint").css("display", "block");
 });
 
 $("#clues-button").click(function () {
-  $(".clues").css("display", "block")
-    $("#notepad").css("display", "none")
-    $("#hint").css("display", "none")
-    $("#hint-checker").css("display", "none")
-    $("#no-hint").css("display", "none")
-    $("#clues-button").prop("disabled", true)
-    $("#notepad-button").prop("disabled", false)
-    $("#hint-button").prop("disabled", false)
+  $(".clues").css("display", "block");
+    $("#notepad").css("display", "none");
+    $("#hint").css("display", "none");
+    $("#hint-checker").css("display", "none");
+    $("#no-hint").css("display", "none");
+    $("#clues-button").prop("disabled", true);
+    $("#notepad-button").prop("disabled", false);
+    $("#hint-button").prop("disabled", false);
 });
 
 $("#notepad-button").click(function () {
-  $("#notepad").css("display", "flex")
-    $(".clues").css("display", "none")
-    $("#hint").css("display", "none")
-    $("#hint-checker").css("display", "none")
-    $("#no-hint").css("display", "none")
-    $("#notepad-button").prop("disabled", true)
-    $("#clues-button").prop("disabled", false)
-    $("#hint-button").prop("disabled", false)
+  $("#notepad").css("display", "flex");
+    $(".clues").css("display", "none");
+    $("#hint").css("display", "none");
+    $("#hint-checker").css("display", "none");
+    $("#no-hint").css("display", "none");
+    $("#notepad-button").prop("disabled", true);
+    $("#clues-button").prop("disabled", false);
+    $("#hint-button").prop("disabled", false);
 });
 
 /*-------------------------Game Breaking Reset Button*/
@@ -68,7 +68,7 @@ $("#reset-button").click(function () {
   setTimeout(function () {
     window.location.pathname = "riddle.html"
   }, 2000);
-  $(".bg-riddle").addClass("riddle-zoom-out")
+  $(".bg-riddle").addClass("riddle-zoom-out");
 });
 
 /*-------------------------Congratulation Buttons*/
@@ -77,20 +77,20 @@ $("#finished-reset").click(function () {
   setTimeout(function () {
     window.location.pathname = "riddle.html"
   }, 2000);
-  $(".bg-riddle").addClass("riddle-zoom-out")
+  $(".bg-riddle").addClass("riddle-zoom-out");
 });
 
 $("#return-galaxy").click(function () {
   setTimeout(function () {
     window.location.pathname = "index.html"
   }, 2000);
-  $(".bg-riddle").addClass("riddle-zoom-out")
+  $(".bg-riddle").addClass("riddle-zoom-out");
 });
 
 var cats = new Audio('./assets/media/cat.mp4')
 
 $("#feed-the-cat").click(function () {
-  $("#fish-victory").css("display", "none") &&
-    $("#feed-the-cat").prop("disabled", true)
+  $("#fish-victory").css("display", "none");
+    $("#feed-the-cat").prop("disabled", true);
   cats.play();
 });

@@ -8,10 +8,10 @@ $(document).ready(function () {
     ["cats", "horses", "birds", "fish", "dogs"], ["Dunhill", "Blends", "Pall Mall", "Prince", "Bluemaster"],
     ["water", "tea", "milk", "coffee", "beer"]];
 
-    var cats = new Audio('./assets/media/cat.mp4')
-    var horses = new Audio('./assets/media/horse.mp4')
-    var birds = new Audio('./assets/media/bird.mp4')
-    var dogs = new Audio('./assets/media/dog.mpeg')
+    var cats = new Audio('./assets/media/cat.mp4');
+    var horses = new Audio('./assets/media/horse.mp4');
+    var birds = new Audio('./assets/media/bird.mp4');
+    var dogs = new Audio('./assets/media/dog.mpeg');
 
     $("#B3").on("change", function () {
         if (answerArray[2][0].crosscheck() === $("#B3").val().crosscheck())

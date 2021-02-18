@@ -1,16 +1,16 @@
 $(document).ready(function () {
 
     $("#galaxy-button").click(function () {
-        $(".intro-para").addClass("intro-para-zoom-out")
-        $("#header").addClass("header-rise")
-        $("#footer").addClass("footer-drop")
+        $(".intro-para").addClass("intro-para-zoom-out");
+        $("#header").addClass("header-rise");
+        $("#footer").addClass("footer-drop");
     });
 
     $("#galaxy-button").click(function () {
         setTimeout(function () {
             window.location.href = window.location.href + "riddle.html"
         }, 5000);
-        $("#galaxy-image").addClass("galaxy-zoom")
+        $("#galaxy-image").addClass("galaxy-zoom");
     });
 
 });
