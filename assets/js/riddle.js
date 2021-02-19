@@ -122,6 +122,7 @@ $(document).ready(function () {
             { $("#einstein-pic").attr("src", "assets/images/einstein-victory.gif") };
             /* --- CREDIT: Image: https://wifflegif.com/gifs/662977-albert-einstein-insanity-gif --- */
             celebration.play();
+            timeGrab();
         };
         return result;
     };
