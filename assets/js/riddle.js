@@ -106,6 +106,9 @@ $(document).ready(function () {
             return result;
         });
         if (result == true) {
+            
+            celebration.play();
+
             $(".congratulations").css("display", "block");
             $(".clues").css("display", "none");
             $("#hint").css("display", "none");
@@ -121,7 +124,7 @@ $(document).ready(function () {
             clearInterval(picRotationInterval);
             { $("#einstein-pic").attr("src", "assets/images/einstein-victory.gif") };
             /* --- CREDIT: Image: https://wifflegif.com/gifs/662977-albert-einstein-insanity-gif --- */
-            celebration.play();
+
             timeGrab();
         };
         return result;

@@ -92,31 +92,6 @@ $(document).ready(function () {
 
 });
 
-// Riddle Completetion Time Calculator
-
-// let result = document.querySelector("#timer-final");
-
-// var firstDateGrab;
-// var secondDateGrab;
-
-//     $("#start-button").click(function () {
-//         firstDateGrab = new Date();
-//         console.log(firstDateGrab)
-//     });
-
-//     $("#notepad-button").click(function () {
-//          secondDateGrab = new Date();
-//          console.log(secondDateGrab)
-//     });
-
-//     $("#hint-button").click(function () {
-//         let ms = (secondDateGrab.getTime()) - (firstDateGrab.getTime());
-//         let minute = 1000 * 60;
-
-//         result.innerText = "Completion Time: " + parseInt(ms/minute).toFixed(2) + " minutes"; 
-//         console.log(result)
-//     });
-
 // // Riddle Completetion Time Calculator
 
 let result = document.querySelector("#timer-final");
@@ -126,37 +101,13 @@ var secondDateGrab;
 
 $("#start-button").click(function () {
     firstDateGrab = new Date();
-    console.log(firstDateGrab)
 });
 
 function timeGrab() {
     secondDateGrab = new Date();
-    console.log(secondDateGrab);
 
     let ms = (secondDateGrab.getTime()) - (firstDateGrab.getTime());
     let minute = 1000 * 60;
 
-    result.innerText = "Completion Time: " + parseInt(ms / minute).toFixed(2) + " minutes";
-    console.log(result)
+    result.innerText = "Completion Time: " + parseInt(ms / minute) + " minutes";
 }
-
-// $(".answers").change(function () {
-//     setTimeout(() => {
-//         let elem = document.querySelector("#fish-victory");
-//         let displayValue = window.getComputedStyle(elem, null).getPropertyValue('display');
-//         console.log(elem)
-//         console.log(displayValue)
-
-//         if (displayValue == 'block') {
-            // secondDateGrab = new Date();
-            // console.log(secondDateGrab);
-
-            // let ms = (secondDateGrab.getTime()) - (firstDateGrab.getTime());
-            // let minute = 1000 * 60;
-
-            // result.innerText = "Completion Time: " + parseInt(ms / minute).toFixed(2) + " minutes";
-            // console.log(result)
-//         }
-//         }, 2000)
-
-// });
