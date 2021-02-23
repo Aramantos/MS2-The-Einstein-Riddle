@@ -60,7 +60,7 @@ th {
 /*-------------------------Riddle Explanation Panel */
 
 .explanation-panel {
-  font-size: 240%;
+  font-size: 210%;
   position: absolute;
   background-color: #000000b5;
   width: 75%;
@@ -755,7 +755,7 @@ th {
   }
 
   .explanation-panel {
-    font-size: 220%;
+    font-size: 200%;
   }
 }
 
@@ -767,7 +767,7 @@ th {
 
 @media screen and (max-width: 1370px) {
   .explanation-panel {
-    font-size: 220%;
+    font-size: 190%;
   }
 }
 
