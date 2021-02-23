@@ -6,7 +6,7 @@ $("#start-button").click(function () {
 
 $("#back-button").click(function () {
   setTimeout(function () {
-    window.location.href = window.location.href + "index.html"
+    document.location.href="index.html"
   }, 2000);
   $(".bg-riddle").addClass("riddle-zoom-out")
 });
@@ -66,7 +66,7 @@ $("#notepad-button").click(function () {
 
 $("#reset-button").click(function () {
   setTimeout(function () {
-    window.location.href = window.location.href + "riddle.html"
+    location.reload()
   }, 2000);
   $(".bg-riddle").addClass("riddle-zoom-out");
 });
@@ -75,14 +75,14 @@ $("#reset-button").click(function () {
 
 $("#finished-reset").click(function () {
   setTimeout(function () {
-    window.location.href = window.location.href + "riddle.html"
+    location.reload()
   }, 2000);
   $(".bg-riddle").addClass("riddle-zoom-out");
 });
 
 $("#return-galaxy").click(function () {
   setTimeout(function () {
-    window.location.href = window.location.href + "index.html"
+    document.location.href="index.html"
   }, 2000);
   $(".bg-riddle").addClass("riddle-zoom-out");
 });
