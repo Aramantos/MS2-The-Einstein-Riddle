@@ -159,7 +159,7 @@ footer {
   text-decoration: none;
 }
 
-#email a:hover{
+#email a:hover {
   text-decoration: underline;
 }
 
@@ -307,10 +307,10 @@ a {
 /*-------------------------Media Queries */
 
 @media screen and (max-height: 1140px) {
-  #container{
+  #container {
     margin-top: 0;
   }
-  #social-links{
+  #social-links {
     margin-top: 0;
   }
 }
@@ -326,23 +326,23 @@ a {
 }
 
 @media screen and (max-width: 1320px) {
-  #galaxy-image{
+  #galaxy-image {
     background-size: 220%;
   }
 }
 
 @media screen and (max-width: 1070px) {
-  #contact{
+  #contact {
     margin-top: 0;
     font-size: 100%;
   }
 }
 
 @media screen and (max-width: 950px) {
-  #headline{
+  #headline {
     font-size: 220%;
   }
-  #contact{
+  #contact {
     letter-spacing: 2px;
     font-size: 75%;
   }

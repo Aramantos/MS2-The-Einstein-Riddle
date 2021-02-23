@@ -106,7 +106,7 @@ $(document).ready(function () {
             return result;
         });
         if (result == true) {
-            
+
             celebration.play();
 
             $(".congratulations").css("display", "block");

@@ -630,7 +630,7 @@ th {
   text-decoration: none;
 }
 
-#email a:hover{
+#email a:hover {
   text-decoration: underline;
 }
 
@@ -707,16 +707,16 @@ th {
   .user-controls {
     font-size: 90%;
   }
-  .riddle-table{
+  .riddle-table {
     height: 41.2vh;
   }
-  #warning-title{
+  #warning-title {
     margin: 25px 0;
   }
 }
 
 @media screen and (max-height: 950px) {
-  #warning-title{
+  #warning-title {
     margin: 20px 0;
   }
 }
@@ -799,9 +799,9 @@ th {
 }
 
 @media screen and (max-width: 1230px) {
-    .breaking-game-warning{
-        font-size: 165%;
-    }
+  .breaking-game-warning {
+    font-size: 165%;
+  }
 }
 
 @media screen and (max-width: 1200px) {
@@ -816,7 +816,7 @@ th {
     font-size: 165%;
   }
 
-  .breaking-game-warning{
+  .breaking-game-warning {
     font-size: 160%;
   }
 
@@ -838,9 +838,9 @@ th {
 }
 
 @media screen and (max-width: 1125px) {
-    .breaking-game-warning{
-        font-size: 155%;
-    }
+  .breaking-game-warning {
+    font-size: 155%;
+  }
 }
 
 @media screen and (max-width: 1112px) {
@@ -859,14 +859,13 @@ th {
 }
 
 @media screen and (max-width: 1070px) {
-  .breaking-game-warning{
-        font-size: 150%;
+  .breaking-game-warning {
+    font-size: 150%;
   }
 }
 
 @media screen and (max-width: 1045px) {
-
-  .breaking-game-warning{
+  .breaking-game-warning {
     font-size: 145%;
   }
   #hint-checker {
@@ -885,8 +884,7 @@ th {
 }
 
 @media screen and (max-width: 1045px) {
-
-  .breaking-game-warning{
+  .breaking-game-warning {
     font-size: 140%;
   }
 }
