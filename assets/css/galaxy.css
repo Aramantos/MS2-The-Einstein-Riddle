@@ -306,25 +306,6 @@ a {
 
 /*-------------------------Media Queries */
 
-@media screen and (max-height: 1350px) {
-    @keyframes header-drop {
-        0% {
-            transform: translate(0px, -1800px);
-        }
-        100% {
-            transform: translate(0, 0);
-        }
-    }
-    @keyframes footer-rise {
-        0% {
-            transform: translate(0, 1800px);
-        }
-        100% {
-            transform: translate(0, 0);
-        }
-    }
-}
-
 @media screen and (max-height: 1140px) {
   #container{
     margin-top: 0;
@@ -351,16 +332,10 @@ a {
 }
 
 @media screen and (max-width: 1070px) {
-  /* #container{
-    margin-top: 10px;
-  } */
   #contact{
     margin-top: 0;
     font-size: 100%;
   }
-  /* #social-links{
-      margin-top: 15px;
-  } */
 }
 
 @media screen and (max-width: 950px) {
