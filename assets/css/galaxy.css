@@ -314,3 +314,9 @@ a {
     font-size: 1.5em;
   }
 }
+
+@media screen and (max-width: 1320px) {
+  #galaxy-image{
+    background-size: 190%;
+  }
+}
