@@ -203,7 +203,7 @@ $(document).ready(function () {
             answerArray[4][2].crosscheck() === $("#D5").val().crosscheck() &&
             answerArray[1][1].crosscheck() === $("#C2").val().crosscheck()) /*Norwegian & milk & blue*/
             $("#hint-text").text(function () {
-                return "Process of elimination, one of the clues, only has one possible option"
+                return "Process of elimination, one of the colour clues, only has one possible option"
             });
 
         if (answerArray[1][3].crosscheck() === $("#E2").val().crosscheck() &&

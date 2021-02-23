@@ -335,35 +335,35 @@ th {
 /*------------- Nationality Flags */
 
 .norwegian {
-  background-image: url(/assets/images/flags/norwegian.jpeg);
+  background-image: url("../images/flags/norwegian.jpeg");
   background-size: contain;
   border-color: white;
   color: rgba(0, 0, 0, 0);
 }
 
 .dane {
-  background-image: url(/assets/images/flags/dane.png);
+  background-image: url("../images/flags/dane.png");
   background-size: contain;
   border-color: white;
   color: rgba(0, 0, 0, 0);
 }
 
 .brit {
-  background-image: url(/assets/images/flags/brit.webp);
+  background-image: url("../images/flags/brit.webp");
   background-size: contain;
   border-color: white;
   color: rgba(0, 0, 0, 0);
 }
 
 .german {
-  background-image: url(/assets/images/flags/german.jpg);
+  background-image: url("../images/flags/german.jpg");
   background-size: contain;
   border-color: white;
   color: rgba(0, 0, 0, 0);
 }
 
 .swede {
-  background-image: url(/assets/images/flags/swede.png);
+  background-image: url("../images/flags/swede.png");
   background-size: contain;
   border-color: white;
   color: rgba(0, 0, 0, 0);
@@ -421,7 +421,7 @@ th {
 /*------------- Smoking */
 
 .smoking-answer {
-  background-image: url(/assets/images/smoking.gif);
+  background-image: url("../images/smoking.gif");
   background-position: right;
   border-color: white;
   color: #c3bdbd;
@@ -430,35 +430,35 @@ th {
 /*------------- Drinks */
 
 .water {
-  background-image: url(/assets/images/drinks/water.jpeg);
+  background-image: url("../images/drinks/water.jpeg");
   background-size: contain;
   border-color: black;
   color: rgba(0, 0, 0, 0);
 }
 
 .tea {
-  background-image: url(/assets/images/drinks/tea.jpeg);
+  background-image: url("../images/drinks/tea.jpeg");
   background-size: contain;
   border-color: black;
   color: rgba(0, 0, 0, 0);
 }
 
 .milk {
-  background-image: url(/assets/images/drinks/milk.jpeg);
+  background-image: url("../images/drinks/milk.jpeg");
   background-size: contain;
   border-color: white;
   color: rgba(0, 0, 0, 0);
 }
 
 .coffee {
-  background-image: url(/assets/images/drinks/coffee.jpg);
+  background-image: url("../images/drinks/coffee.jpg");
   background-size: contain;
   border-color: black;
   color: rgba(0, 0, 0, 0);
 }
 
 .beer {
-  background-image: url(/assets/images/drinks/beer.jpeg);
+  background-image: url("../images/drinks/beer.jpeg");
   background-size: contain;
   border-color: black;
   color: rgba(0, 0, 0, 0);
