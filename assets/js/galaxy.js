@@ -8,7 +8,7 @@ $(document).ready(function () {
 
     $("#galaxy-button").click(function () {
         setTimeout(function () {
-            window.location.href = window.location.href + "riddle.html"
+            document.location.href="riddle.html"
         }, 5000);
         $("#galaxy-image").addClass("galaxy-zoom");
     });
