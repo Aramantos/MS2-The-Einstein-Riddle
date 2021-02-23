@@ -381,7 +381,7 @@ $(document).ready(function () {
             incorrectAnswerCount.count = 0;
         };
 
-        if (incorrectAnswerCount.count >= 3)
+        if (incorrectAnswerCount.count >= 2)
             return true;
         else {
             incorrectAnswerCount.lastAnswer = currentAnswer
