@@ -325,6 +325,19 @@ a {
   }
 }
 
+@media screen and (max-height: 700px) {
+  header{
+    margin-top: 20px;
+  }
+  .intro-para{
+    font-size: 120%;
+    height: 58%;
+  }
+  #contact{
+    font-size: 85%!important;
+  }
+}
+
 @media screen and (max-width: 1320px) {
   #galaxy-image {
     background-size: 220%;
