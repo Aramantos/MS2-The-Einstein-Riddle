@@ -40,7 +40,7 @@ th {
 /*-------------------------Riddle */
 
 .bg-riddle {
-  overflow: hidden;
+  /* overflow: hidden; */
   margin: 6px;
 
   animation-name: riddle-zoom;
