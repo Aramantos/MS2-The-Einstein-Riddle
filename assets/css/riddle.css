@@ -721,6 +721,12 @@ th {
   }
 }
 
+@media screen and (max-height: 900px) {
+  .congratulations {
+    margin-top: 15%;
+  }
+}
+
 @media screen and (max-height: 880px) {
   .clues {
     height: 79%;
@@ -762,6 +768,9 @@ th {
 @media screen and (max-height: 825px) {
   .user-controls {
     font-size: 75%;
+  }
+  .congratulations {
+    margin-top: 10%;
   }
 }
 
