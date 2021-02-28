@@ -93,7 +93,7 @@ Galaxy Page:
 - Paragraph emerges from the galaxy centre with an introduction to the riddle
 - Header with the riddle title drops down onto the screen from above
 - Footer with contact and social links rises up from below
-- Social links will open a new tab to the relevant page
+- Social links that will open a new tab to the relevant page
 - When the "Good Luck!" button is pressed, the header and footer return off-screen and the introduction paragraph returns to the centre of the galaxy. The background zooms in to create the illusion of the user being sucked to the centre along with the paragraph.
 
 Riddle Page:
@@ -119,6 +119,9 @@ Riddle Page:
 - When a user completes the riddle, the Einstein clapping gif replaces the Einstein picture
 - If a user attempts the same answer multiple times, inputs are disabled, Einstein image changes to a demonised caricature, a reset button emerges and a warning message appears scolding the user
 - On completion of the riddle the clue-controls panel is replaced but the congratulations panel, which consists of "Welcome to the 2%" spinning text, social links, background image of a confetti gif and three buttons
+  - Reset - Reloads the page
+  - Back to Galaxy - Returns the user to the galaxy page
+  - Feed the Cat - Which removes the fish gif and plays the cat audio for comic effect 
 
 ---
 

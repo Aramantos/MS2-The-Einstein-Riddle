@@ -276,7 +276,7 @@ $(document).ready(function () {
         if (answerArray[0][4].crosscheck() === $("#F1").val().crosscheck() &&
             answerArray[2][4].crosscheck() === $("#F3").val().crosscheck()) /*Swede and dogs*/
             $("#hint-text").css("padding", "35px").text(function () {
-                return "Are you fucking kidding me! You need a clue right now?! Get off my website! Your banned!"
+                return "For you to seek a clue at this late stage, you disapoint me"
             });
     }
 
