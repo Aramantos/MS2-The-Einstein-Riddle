@@ -877,6 +877,19 @@ th {
   .breaking-game-warning {
     font-size: 150%;
   }
+  .user-controls button{
+    font-size: 70%;
+  }
+  #congrats-buttons{
+    font-size: 75%;
+  }
+  #hints-timer-display{
+    display: block;
+    text-align: center;
+  }
+  #email{
+      font-size: 75%;
+  }
 }
 
 @media screen and (max-width: 1045px) {
@@ -901,5 +914,11 @@ th {
 @media screen and (max-width: 1045px) {
   .breaking-game-warning {
     font-size: 140%;
+  }
+}
+
+@media screen and (max-width: 945px) {
+  .notepad-button {
+    font-size: 55%;
   }
 }
