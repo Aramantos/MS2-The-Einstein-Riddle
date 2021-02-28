@@ -919,6 +919,12 @@ th {
 
 @media screen and (max-width: 945px) {
   .notepad-button {
-    font-size: 55%;
+    font-size: 55%!important;
+  }
+}
+
+@media screen and (max-width: 810px) {
+  #hint-text {
+    padding: 10px;
   }
 }
