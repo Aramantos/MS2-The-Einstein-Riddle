@@ -319,13 +319,15 @@ JS - [JSHint](https://jshint.com/) - JS Validator
 - Designing the site to be comfortably navigated without having to use the back button in the browser interface.
 
 ---
+### Manual Testing 
+---
 
-### **Galaxy**
+#### **Galaxy**
 
 - "Good Luck!" button initiates the animation and correctly opens up riddle.html after the designated time delay has passed.
 - All social links open a new tab to my profile on the designated media site
 
-### **Riddle**
+#### **Riddle**
 
 - Start button removes the explanation panel and begins the timer
 - Back button initiates the animation and returns the user to the galaxy page
