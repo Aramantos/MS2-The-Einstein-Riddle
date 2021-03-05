@@ -66,7 +66,7 @@ I designed this webpage to supply the riddle in an easily digestible and interac
 
 One of my main aims was to create this web application without using any front-end frameworks, to test and push the limits of my css knowledge.
 
-I designed this application to be responsive primarily on desktop (large) screens and landscape medium size screens. It is still relativly responsive on medium size portraint screens with a small margin of error. I believe any smaller would lead to a difficult interface and information overload.
+I designed this application to be responsive primarily on desktop (large) screens and landscape medium size screens. It is still relatively responsive on medium-size portrait screens with a small margin of error. I believe any smaller would lead to a difficult interface and information overload.
 
 - Create an interactive user-friendly web application
 - Provide a visually pleasing workspace to complete the riddle
@@ -92,7 +92,7 @@ Galaxy Page:
 
 - Paragraph emerges from the galaxy centre with an introduction to the riddle
 - Header with the riddle title drops down onto the screen from above
-- Footer with contact and social links rises up from below
+- Footer with contact and social links rises from below
 - Social links that will open a new tab to the relevant page
 - When the "Good Luck!" button is pressed, the header and footer return off-screen and the introduction paragraph returns to the centre of the galaxy. The background zooms in to create the illusion of the user being sucked to the centre along with the paragraph.
 
@@ -104,7 +104,7 @@ Riddle Page:
 - Riddle expands out from the centre of the screen
 - Table of input elements for answers
 - Information section with interactive multiple panel viewing
-- Clues list are bullet-pointed and cross out when the corresponding answers is entered
+- Clues list are bullet-pointed and cross out when the corresponding answers are entered
 - Hint section for the user if they are struggling
   - Text changes depending on how far along the user is in the riddle
 - Before a user can view the hint there is a box to attempt to convince the user to try a bit harder before asking for a clue
@@ -336,8 +336,8 @@ JS - [JSHint](https://jshint.com/) - JS Validator
 - Back button initiates the animation and returns the user to the galaxy page
 - Each input element responds as expected when the correct answer is entered
   - Nationality changes to the corresponding flag
-  - Input element background, border and text color change to highlight the corresponding color
-    - House icons also change to the corresponding color and initiates animation
+  - Input element background, border and text colour change to highlight the corresponding colour
+    - House icons also change to the corresponding colour and initiates animation
   - Pet sounds of the corresponding animal sound on input
   - Smoking gif displays in the background
   - Specific beverage image replaces the input
@@ -359,11 +359,11 @@ JS - [JSHint](https://jshint.com/) - JS Validator
       - Yes, I am hopelessly lost - reveals the hint based on the user's current answers
       - No, I will try harder - changes panel to "no-hint"
   - Hint button is disabled
-- When clues button is pressed...
+- When the clues button is pressed...
   - All other potential panels are removed
   - Displays the hint panel
   - Clues button is disabled
-- When notepad button is pressed...
+- When the notepad button is pressed...
   - All other potential panels are removed
   - Displays the textarea
   - Notepad button is disabled
@@ -390,7 +390,7 @@ JS - [JSHint](https://jshint.com/) - JS Validator
 2. The audio files would not play, and console test eg(console.log(cats.duration)) were returning NaN
 3. The hint checker "No, I will try harder" changes the text of the hint to "Excellent choice, I am so proud" but doesn't if the user does decide to opt for the hint later it does switch back to the original hint.
 4. window.location objects work within GitPod but when pushed to GitHub the live site threw back a 404 error
-5. When being viewed on an ipad, the url and tab bar were preventing the user from being able to access the bottom input elements without the keyboard being on the screen.
+5. When being viewed on an iPad, the url and tab bar were preventing the user from being able to access the bottom input elements without the keyboard being on the screen.
 
 #### **Resolution**
 
@@ -403,7 +403,7 @@ JS - [JSHint](https://jshint.com/) - JS Validator
 #### **Unresolved**
 
 - The site is not as responsive as I would like, medium-size device screens in portrait are not ideal, but due to time constraints and my skill limitations, I was unable to make it fully responsive.
-- While testing the device on my iPad, I realised that when a correct answer the input was disabling as it should but it was overwritting my css and the element appearing to be slightly transparent, due to time constraits I could not resolve this issue.
+- While testing the device on my iPad, I realised my css was being overwritten. When input was disabled due to a correct answer, the element appearing to be slightly transparent. Due to time constraints, I could not resolve this issue.
 
 [Return to Table of Contents](#table-of-contents)
 
@@ -461,7 +461,7 @@ JS - [JSHint](https://jshint.com/) - JS Validator
 
 ---
 
-- JavaScript has been a challenging language to learn, there are so many different approaches that will lead you to the same result. (eg. initially, I was writing out long functions with multiple if statements, but as time went on I started learning how to refactor my code into a loop)T he biggest lesson I have learned is to always try to achieve the result in as few lines as possible.
+- JavaScript has been a challenging language to learn, there are so many different approaches that will lead you to the same result. (eg. initially, I was writing out long functions with multiple if statements, but as time went on I started learning how to refactor my code into a loop) The biggest lesson I have learned is to always try to achieve the result in as few lines as possible.
 - I decided to build the project without Bootstrap to test my css skills, although I have learned a lot from this route, I will be using a framework going forward to cover the heavy lifting.
 - Responsiveness was always going to be a challenge from the nature of what I wanted to achieve, especially without a frontend framework, it slowed down my progress but did allow me to increase my knowledge and gain a greater appreciation for frameworks.
 - I used someone else's code for the timer (timer.js) and taking that and using it to suit my purposes was challenging. The original author's code has specific HTML requirements which caused issues when trying to adapt to my own.
