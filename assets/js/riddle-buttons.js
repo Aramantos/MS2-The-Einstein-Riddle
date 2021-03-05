@@ -23,15 +23,13 @@ $("#hint-button").click(function () {
   $("#clues-button").prop("disabled", false);
 });
 
-var hintCount = 0;
+let hintCount = 0;
 
 $("#hint-yes").click(function () {
   hintCount++;
   $("#hint-checker").css("display", "none");
   $("#hint-text").css("display", "block");
-  $("#hints-used").text(function () {
-    return "Hints Used: " + hintCount
-  });
+  $("#hints-used").text("Hints Used: " + hintCount);
 });
 
 $("#hint-no").click(function () {
@@ -87,7 +85,7 @@ $("#return-galaxy").click(function () {
   $(".bg-riddle").addClass("riddle-zoom-out");
 });
 
-var cats = new Audio('./assets/media/cat.mp4')
+const cats = new Audio('./assets/media/cat.mp4')
 
 $("#feed-the-cat").click(function () {
   $("#fish-victory").css("display", "none");

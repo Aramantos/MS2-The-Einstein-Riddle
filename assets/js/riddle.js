@@ -46,10 +46,11 @@ $(document).ready(function () {
         F5: "beer"
     };
 
+    let picRotationInterval = null;
     let correctAnswer = false; // variable to allow picture to change when correct answer is inputted
+    let incorrectAnswer = false;
 
-    let incorrectAnswer = false; // variable to allow picture to change when wrong answer is inputted
-    var incorrect = new Audio('./assets/media/incorrect.mp3')
+    const incorrect = new Audio('./assets/media/incorrect.mp3')
     /* --- CREDIT: Audio: https://www.youtube.com/watch?v=36_bISAhExo --- */
 
     $(".answers").on("change", function () { // If user attempts to break the game this function disables the riddle
@@ -70,14 +71,11 @@ $(document).ready(function () {
 
         if ($(this).val().crosscheck() !== riddleAnswers[this.id].crosscheck()) { // Clears input field if wrong answer value is inputted
             $(this).val("");
-            incorrectAnswer = true // Injects wrong.pic into rotation temporarily
+            incorrectAnswer = true; // Injects wrong.pic into rotation temporarily
             incorrect.play();
-        }
-
-        else {
-            correctAnswer = true // Injects wink.pic into rotation temporarily
+        } else {
+            correctAnswer = true; // Injects wink.pic into rotation temporarily
         };
-
         if ($(this).val().crosscheck() === riddleAnswers[this.id].crosscheck()) {
             $(this).prop("disabled", true).css("background-color", "white"); // Disables input if correct answer is entered
         };
@@ -91,12 +89,11 @@ $(document).ready(function () {
         smokingAnswer(); // When correct answer is entered smoking gif is shown in the background
         drinksAnswer(); // When correct answer is inputted the background image changes to a picture of the corresponding answer
         hintSwitcher(); // Changes hint-text when correct answers are inputted
-
     });
 
     function riddleCorrect() { // Checks all answers are correct, then changes picture to einstein-victory.gif
 
-        var celebration = new Audio('./assets/media/celebration.mp3')
+        const celebration = new Audio('./assets/media/celebration.mp3')
         /* --- CREDIT: Audio: https://vimeo.com/335541134 --- */
 
         let result = false;
@@ -146,7 +143,7 @@ $(document).ready(function () {
 
         if (answerArray[0][0].crosscheck() === $("#B1").val().crosscheck()) /*Norwegian*/
             $("#clue-9").addClass("line-through");
-
+            
         if (answerArray[4][2].crosscheck() === $("#D5").val().crosscheck()) /*milk*/
             $("#clue-8").addClass("line-through");
 
@@ -198,86 +195,60 @@ $(document).ready(function () {
     }
 
     function hintSwitcher() { // Changes hint-text when correct answers are inputted
-
+        const hintText = $("#hint-text");
         if (answerArray[0][0].crosscheck() === $("#B1").val().crosscheck() &&
             answerArray[4][2].crosscheck() === $("#D5").val().crosscheck() &&
             answerArray[1][1].crosscheck() === $("#C2").val().crosscheck()) /*Norwegian & milk & blue*/
-            $("#hint-text").text(function () {
-                return "Process of elimination, one of the colour clues, only has one possible option"
-            });
+            hintText.text("Process of elimination, one of the colour clues, only has one possible option");
 
         if (answerArray[1][3].crosscheck() === $("#E2").val().crosscheck() &&
             answerArray[1][4].crosscheck() === $("#F2").val().crosscheck()) /*green and white*/
-            $("#hint-text").text(function () {
-                return "Process of elimination, one of the clues, only has one possible option"
-            });
+            hintText.text("Process of elimination, one of the clues, only has one possible option");
 
         if (answerArray[1][2].crosscheck() === $("#D2").val().crosscheck() &&
             answerArray[0][2].crosscheck() === $("#D1").val().crosscheck()) /*red and Brit*/
-            $("#hint-text").text(function () {
-                return "Only one option remaining"
-            });
+            hintText.text("Only one option remaining");
 
         if (answerArray[1][0].crosscheck() === $("#B2").val().crosscheck()) /*yellow*/
-            $("#hint-text").text(function () {
-                return "A Clue will lead you directly to the answer"
-            });
+            hintText.text("A Clue will lead you directly to the answer");
 
         if (answerArray[3][0].crosscheck() === $("#B4").val().crosscheck()) /*Dunhill*/
-            $("#hint-text").text(function () {
-                return "A Clue will lead you directly to the answer"
-            });
+            hintText.text("A Clue will lead you directly to the answer");
 
         if (answerArray[2][1].crosscheck() === $("#C3").val().crosscheck() &&
             answerArray[4][3].crosscheck() === $("#E5").val().crosscheck()) /*horses & coffee*/
-            $("#hint-text").text(function () {
-                return "There is no clue for this answer, use the clues and process of elimination"
-            });
+            hintText.text("There is no clue for this answer, use the clues and process of elimination");
 
         if (answerArray[4][0].crosscheck() === $("#B5").val().crosscheck()) /*water*/
-            $("#hint-text").text(function () {
-                return "A Clue will lead you directly to the answer"
-            });
+            hintText.text("A Clue will lead you directly to the answer");
 
         if (answerArray[3][1].crosscheck() === $("#C4").val().crosscheck()) /*blends*/
-            $("#hint-text").text(function () {
-                return "A clue can only fit in one place"
-            });
+            hintText.text("A clue can only fit in one place");
 
         if (answerArray[3][4].crosscheck() === $("#F4").val().crosscheck() &&
             answerArray[4][4].crosscheck() === $("#F5").val().crosscheck()) /*Bluemaster and beer*/
-            $("#hint-text").text(function () {
-                return "Only one option remaining, which leads you to a clue answer"
-            });
+            hintText.text("Only one option remaining, which leads you to a clue answer");
 
         if (answerArray[0][1].crosscheck() === $("#C1").val().crosscheck() &&
             answerArray[4][1].crosscheck() === $("#C5").val().crosscheck()) /*Dane and tea*/
-            $("#hint-text").text(function () {
-                return "A clue can only fit in one place"
-            });
+            hintText.text("A clue can only fit in one place");
 
         if (answerArray[0][3].crosscheck() === $("#E1").val().crosscheck() &&
             answerArray[3][3].crosscheck() === $("#E4").val().crosscheck()) /*German and Prince*/
-            $("#hint-text").text(function () {
+            hintText.text(function () {
                 return "A clue can only fit in one place"
             });
 
         if (answerArray[2][2].crosscheck() === $("#D3").val().crosscheck() &&
             answerArray[3][2].crosscheck() === $("#D4").val().crosscheck()) /*birds and Pall Mall*/
-            $("#hint-text").text(function () {
-                return "Now, a clue can only fit in one place"
-            });
+            hintText.text("Now, a clue can only fit in one place");
 
         if (answerArray[2][0].crosscheck() === $("#B3").val().crosscheck()) /*cats*/
-            $("#hint-text").text(function () {
-                return "A clue can only fit in one place"
-            });
+            hintText.text("A clue can only fit in one place");
 
         if (answerArray[0][4].crosscheck() === $("#F1").val().crosscheck() &&
             answerArray[2][4].crosscheck() === $("#F3").val().crosscheck()) /*Swede and dogs*/
-            $("#hint-text").css("padding", "35px").text(function () {
-                return "For you to seek a clue at this late stage, you disapoint me"
-            });
+            hintText.css("padding", "35px").text("For you to seek a clue at this late stage, you disapoint me");
     }
 
     function nationalitiesFlags() { // Changes background of nationalities inputs when correct value is entered
@@ -391,37 +362,38 @@ $(document).ready(function () {
 
     /*-------------------------Einstein Picture Rotation*/
 
-    let index = 0;
+    function start() {
+        let index = 0;
 
-    function rotate() {
-        const einsteinRotation = [
-            "with-hand-2.jpg", "with-hand-3.jpg", "with-hand-4.jpg",
-            "right-1.jpg", "right-2.jpg", "right-3.jpg",
-            "left-1.jpg", "left-2.jpg", "left-3.jpg",
-            "right-1.jpg", "right-2.jpg", "right-3.jpg", "right-4.jpg",
-            "with-hand-2.jpg", "with-hand-3.jpg", "with-hand-4.jpg"
-        ];
+        function rotate() {
+            const einsteinRotation = [
+                "with-hand-2.jpg", "with-hand-3.jpg", "with-hand-4.jpg",
+                "right-1.jpg", "right-2.jpg", "right-3.jpg",
+                "left-1.jpg", "left-2.jpg", "left-3.jpg",
+                "right-1.jpg", "right-2.jpg", "right-3.jpg", "right-4.jpg",
+                "with-hand-2.jpg", "with-hand-3.jpg", "with-hand-4.jpg"
+            ];
 
-        index++
-        if (index == einsteinRotation.length) {
-            index = 0;
-        };
+            index++
+            if (index == einsteinRotation.length) {
+                index = 0;
+            };
 
-        let image = "assets/images/einstein-animation/" + einsteinRotation[index];
+            let image = "assets/images/einstein-animation/" + einsteinRotation[index];
 
-        if (correctAnswer) {
-            image = "assets/images/einstein-animation/wink.jpg";
-            correctAnswer = false;
-        };
+            if (correctAnswer) {
+                image = "assets/images/einstein-animation/wink.jpg";
+                correctAnswer = false;
+            } else if (incorrectAnswer) {
+                image = "assets/images/einstein-animation/wrong-pic.jpg"; 
+                incorrectAnswer = false;
+            }
 
-        if (incorrectAnswer) {
-            image = "assets/images/einstein-animation/wrong-pic.jpg";
-            incorrectAnswer = false;
-        };
+            document.getElementById("einstein-pic").src = image;
+        }
 
-        document.getElementById("einstein-pic").src = image;
+        picRotationInterval = setInterval(rotate, 800);
     }
-
-    let picRotationInterval = setInterval(rotate, 800);
-
+    
+    start();
 }); /* Closing Curly Bracket*/

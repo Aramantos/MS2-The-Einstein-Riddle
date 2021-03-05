@@ -85,29 +85,26 @@ resetButton.addEventListener("click", reset);
 // Timer Start 
 
 $(document).ready(function () {
-
     $("#start-button").click(function () {
         start();
     });
-
 });
 
 // // Riddle Completetion Time Calculator
 
-let result = document.querySelector("#timer-final");
+const result = document.querySelector("#timer-final");
 
-var firstDateGrab;
-var secondDateGrab;
+let firstDateGrab;
 
 $("#start-button").click(function () {
     firstDateGrab = new Date();
 });
 
 function timeGrab() {
-    secondDateGrab = new Date();
+    let secondDateGrab = new Date();
 
-    let ms = (secondDateGrab.getTime()) - (firstDateGrab.getTime());
-    let minute = 1000 * 60;
+    const ms = (secondDateGrab.getTime()) - (firstDateGrab.getTime());
+    const minute = 1000 * 60;
 
     result.innerText = "Completion Time: " + parseInt(ms / minute) + " minutes";
 }

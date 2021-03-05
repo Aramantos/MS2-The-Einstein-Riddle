@@ -1,5 +1,4 @@
 $(document).ready(function () {
-
     $("#galaxy-button").click(function () {
         $(".intro-para").addClass("intro-para-zoom-out");
         $("#header").addClass("header-rise");
@@ -12,5 +11,4 @@ $(document).ready(function () {
         }, 5000);
         $("#galaxy-image").addClass("galaxy-zoom");
     });
-
 });
