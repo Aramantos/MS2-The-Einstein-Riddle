@@ -36,17 +36,6 @@ function start() {
     }, 10);
 }
 
-function pause() {
-    clearInterval(timerInterval);
-}
-
-function reset() {
-    clearInterval(timerInterval);
-    print("00:00:00");
-    elapsedTime = 0;
-    $(".answers").prop("disabled", true).val("")
-}
-
 // Timer Start 
 
 $(document).ready(function () {

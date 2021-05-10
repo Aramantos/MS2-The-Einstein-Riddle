@@ -1,14 +1,14 @@
 /*-------------------------Explanation Panel*/
 
 $("#start-button").click(function () {
-  $(".explanation-panel").addClass("explanation-zoom-out")
+  $(".explanation-panel").addClass("explanation-zoom-out");
 });
 
 $("#back-button").click(function () {
   setTimeout(function () {
-    document.location.href = "index.html"
+    document.location.href = "index.html";
   }, 2000);
-  $(".bg-riddle").addClass("riddle-zoom-out")
+  $(".bg-riddle").addClass("riddle-zoom-out");
 });
 
 /*-------------------------User Controls*/
@@ -64,7 +64,7 @@ $("#notepad-button").click(function () {
 
 $("#reset-button").click(function () {
   setTimeout(function () {
-    location.reload()
+    location.reload();
   }, 2000);
   $(".bg-riddle").addClass("riddle-zoom-out");
 });
@@ -73,19 +73,19 @@ $("#reset-button").click(function () {
 
 $("#finished-reset").click(function () {
   setTimeout(function () {
-    location.reload()
+    location.reload();
   }, 2000);
   $(".bg-riddle").addClass("riddle-zoom-out");
 });
 
 $("#return-galaxy").click(function () {
   setTimeout(function () {
-    document.location.href = "index.html"
+    document.location.href = "index.html";
   }, 2000);
   $(".bg-riddle").addClass("riddle-zoom-out");
 });
 
-const cats = new Audio('./assets/media/cat.mp4')
+const cats = new Audio('./assets/media/cat.mp4');
 
 $("#feed-the-cat").click(function () {
   $("#fish-victory").css("display", "none");

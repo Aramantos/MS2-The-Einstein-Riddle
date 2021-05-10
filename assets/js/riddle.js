@@ -50,14 +50,14 @@ $(document).ready(function () {
     let correctAnswer = false; // variable to allow picture to change when correct answer is inputted
     let incorrectAnswer = false;
 
-    const incorrect = new Audio('./assets/media/incorrect.mp3')
+    const incorrect = new Audio('./assets/media/incorrect.mp3');
     /* --- CREDIT: Audio: https://www.youtube.com/watch?v=36_bISAhExo --- */
 
     $(".answers").on("change", function () { // If user attempts to break the game this function disables the riddle
 
         if (breakingProtection($(this).val().crosscheck())) {
             clearInterval(picRotationInterval);
-            { $("#einstein-pic").attr("src", "assets/images/einstein-animation/cheat-pic.jpg") };
+            $("#einstein-pic").attr("src", "assets/images/einstein-animation/cheat-pic.jpg");
             $(".answers").prop("disabled", true);
             $(".breaking-game-warning").css("display", "block");
             $("#reset-button").css("display", "block");
@@ -66,8 +66,8 @@ $(document).ready(function () {
             $("#hint").css("display", "none");
             $("#notepad").css("display", "none");
             $("#hint-checker").css("display", "none");
-            return false
-        };
+            return false;
+        }
 
         if ($(this).val().crosscheck() !== riddleAnswers[this.id].crosscheck()) { // Clears input field if wrong answer value is inputted
             $(this).val("");
@@ -75,10 +75,10 @@ $(document).ready(function () {
             incorrect.play();
         } else {
             correctAnswer = true; // Injects wink.pic into rotation temporarily
-        };
+        }
         if ($(this).val().crosscheck() === riddleAnswers[this.id].crosscheck()) {
             $(this).prop("disabled", true).css("background-color", "white"); // Disables input if correct answer is entered
-        };
+        }
 
         panelSwticher(); // When an answer in entered, it swtiches the clues-control panel back to clues
         riddleCorrect(); // Checks all answers are correct, then changes picture to einstein-victory.gif
@@ -93,7 +93,7 @@ $(document).ready(function () {
 
     function riddleCorrect() { // Checks all answers are correct, then changes picture to einstein-victory.gif
 
-        const celebration = new Audio('./assets/media/celebration.mp3')
+        const celebration = new Audio('./assets/media/celebration.mp3');
         /* --- CREDIT: Audio: https://vimeo.com/335541134 --- */
 
         let result = false;
@@ -119,13 +119,13 @@ $(document).ready(function () {
             $(".clues-controls").addClass("confeti");
             /* --- CREDIT: Image: https://gifprint.s3.amazonaws.com/p/gif/91022/01da72904cf201382527266021f15734.gif --- */
             clearInterval(picRotationInterval);
-            { $("#einstein-pic").attr("src", "assets/images/einstein-victory.gif") };
+            $("#einstein-pic").attr("src", "assets/images/einstein-victory.gif");
             /* --- CREDIT: Image: https://wifflegif.com/gifs/662977-albert-einstein-insanity-gif --- */
 
             timeGrab();
-        };
+        }
         return result;
-    };
+    }
 
     function panelSwticher() { // When an answer in entered, it swtiches the clues-control panel back to clues
 
@@ -236,7 +236,7 @@ $(document).ready(function () {
         if (answerArray[0][3].crosscheck() === $("#E1").val().crosscheck() &&
             answerArray[3][3].crosscheck() === $("#E4").val().crosscheck()) /*German and Prince*/
             hintText.text(function () {
-                return "A clue can only fit in one place"
+                return "A clue can only fit in one place";
             });
 
         if (answerArray[2][2].crosscheck() === $("#D3").val().crosscheck() &&
@@ -343,22 +343,22 @@ $(document).ready(function () {
 
     /*-------------------------Game Breaking Protection*/
 
-    const incorrectAnswerCount = { lastAnswer: "", count: 0 }
+    const incorrectAnswerCount = { lastAnswer: "", count: 0 };
 
     function breakingProtection(currentAnswer) {
         if (incorrectAnswerCount.lastAnswer === currentAnswer)
             incorrectAnswerCount.count++;
         else {
             incorrectAnswerCount.count = 0;
-        };
+        }
 
         if (incorrectAnswerCount.count >= 2)
             return true;
         else {
-            incorrectAnswerCount.lastAnswer = currentAnswer
+            incorrectAnswerCount.lastAnswer = currentAnswer;
             return false;
-        };
-    };
+        }
+    }
 
     /*-------------------------Einstein Picture Rotation*/
 
@@ -374,10 +374,10 @@ $(document).ready(function () {
                 "with-hand-2.jpg", "with-hand-3.jpg", "with-hand-4.jpg"
             ];
 
-            index++
+            index++;
             if (index == einsteinRotation.length) {
                 index = 0;
-            };
+            }
 
             let image = "assets/images/einstein-animation/" + einsteinRotation[index];
 
@@ -396,4 +396,4 @@ $(document).ready(function () {
     }
     
     start();
-}); /* Closing Curly Bracket*/
+});
